@@ -1,0 +1,488 @@
+* {
+    /*border: 1px red solid;*/
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+#logo {
+    border: 1px red solid;
+    margin-right: auto;
+    height: 130px;
+    width: 100px;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+nav {
+    background-color: aqua;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: yellow;
+    font-size: 1.2em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+nav ul {
+    text-decoration: none;
+    display: flex;
+}
+
+nav ul li {
+    padding: 0 0.5em 0 0.5em;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    cursor: pointer;
+    color: whitesmoke;
+}
+
+#servicesMenu {
+    position: relative;
+    display: block;
+}
+
+#servicesMenu:hover {
+    cursor: pointer;
+    color: whitesmoke;
+}
+
+#servicesMenu:hover #dropDowServices {
+    visibility: visible;
+}
+
+#dropDowServices:hover {
+    visibility: visible;
+}
+
+#dropDowServices {
+    color: yellow;
+    margin-top: 0.3em;
+    position: absolute;
+    left: -25%;
+    visibility: hidden;
+    transition: ease-out 100ms;
+    border: 1px black solid;
+    display: block;
+    background-color: rgba(51, 153, 255, 0.5);
+    box-shadow: 5px 4px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 0.6rem;
+    /* padding: 0; */
+}
+
+#dropDowServices li {
+    /* padding: 0; */
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    padding: 0;
+    padding-left: 1em;
+    display: block;
+}
+
+#dropDowServices li a {
+    color: white;
+    padding: 1em 1em 1em 0.4em;
+    display: block;
+}
+
+#dropDowServices li a:hover {
+    color: black;
+    background-color: goldenrod;
+    border-radius: 0.8rem 0 0 0.8rem;
+}
+
+#buttonClientCentral {
+    margin-left: 3em;
+    margin-right: 4em;
+    filter: drop-shadow(0px 3px 4px #000000);
+}
+
+.defaultButton {
+    color: blue;
+    border-radius: 1em;
+    padding: 0.5em;
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: yellow;
+    cursor: pointer;
+}
+
+#welcome {
+    background-image: url(../imgs/welcomeBackground.jpg);
+    background-size: cover;
+}
+
+#welcome img {
+    max-height: 50em;
+}
+
+#presentationWelcome {
+    margin-left: 2em;
+    font-size: 2em;
+    text-transform: uppercase;
+    color: white;
+}
+
+#presentationWelcome span {
+    color: yellow;
+}
+
+#buttonWelcomViabilidade {
+    /* display:; */
+    font-size: 0.8em;
+    max-width: 50%;
+    margin-top: 0.5em;
+    padding: 0.25em;
+    font-weight: 600;
+}
+
+#buttonWelcomViabilidade:hover {
+    color: turquoise;
+    box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.582);
+}
+
+#buttonWelcomViabilidade a {
+    display: block;
+    text-align: center;
+}
+
+#separatorStart {
+    color: yellow;
+    font-size: 2em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    font-weight: 600;
+    text-transform: uppercase;
+    width: 100%;
+    background-color: blue;
+    text-align: center;
+}
+
+#offersCards {
+    margin-top: 4em;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.mainGradient {
+    background: linear-gradient(to bottom, #13365e 1%, #2475b8 50%, #7db9e8 100%);
+
+}
+
+#offerCard02 {
+    margin-top: -1em;
+    margin-bottom: 1em;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+}
+
+#moreOffers {
+    padding: 0.4em 1.8em 0.4em 1.8em;
+    margin-top: 1.5em;
+    font-size: 2em;
+    border: 1px solid black;
+}
+
+.yellowButton:hover {
+    color: turquoise;
+    background: linear-gradient(to bottom, #fbff00 1%, #dbd823 50%, #beab00 100%);
+}
+
+.flexLineBreaker {
+    width: 100%;
+}
+
+.buttonOfferCard {
+    display: inline-block;
+    font-size: 0.75em;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 0.7em;
+    border: 1px black solid;
+    font-weight: 800;
+    color: white;
+    border-radius: 1.2em;
+    background: linear-gradient(to bottom, #217fcc 0%, #033153 100%);
+    padding: 0.5em 0.7em 0.5em 0.7em;
+
+}
+
+.buttonOfferCard:hover {
+    background: linear-gradient(to bottom, #82c4fa 0%, #033153 100%);
+}
+
+.offerCard {
+    background: linear-gradient(to bottom, #1e5799 0%, #2989d8 50%, #7db9e8 100%);
+    color: white;
+    border: 2px black solid;
+    border-radius: 1em;
+    font-size: 1.5em;
+    max-width: 12.5em;
+    padding: 1em;
+    text-align: center;
+}
+
+.offerCard p {
+    margin-top: 1em;
+}
+
+.offerCard h2 {
+    font-size: 1.4em;
+    font-weight: 1000;
+    color: yellow;
+}
+
+.priceCard {
+    color: yellow;
+    margin-top: 0.2em;
+    display: block;
+    font-size: 1.8em;
+}
+
+.imgDevicesAndUses {
+    display: flex;
+    margin-top: 1.5em;
+    margin-bottom: 2em;
+    justify-content: space-around;
+}
+
+.imgDevicesAndUses img {
+    border: 1px yellow solid;
+    width: 40px;
+    height: 40px;
+}
+
+.smallFontCard {
+    font-size: 0.7em;
+}
+
+.spanBlock {
+    display: block;
+}
+
+#ourAdvantages .advantages {
+    max-width: 75%;
+    border: 0.2em rgba(255, 255, 0, 1) solid;
+    box-shadow: 0 0 15px rgba(255, 255, 0, 0.747);
+    color: white;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    font-size: 1.5em;
+    padding: 2em;
+    text-transform: initial;
+    border-radius: 7em;
+}
+
+.advantages span::first-letter {
+    text-transform: uppercase;
+}
+
+.advantages img {
+    border: 1px yellow solid;
+    width: 130px;
+    height: 80px;
+}
+
+#ourAdvantages .advantageArrow {
+    margin: 1em;
+    width: 30px;
+}
+
+.advantages div span {
+    text-align: center;
+    white-space: nowrap;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+.advantagesSeparator {
+    border: 0.2em rgba(255, 255, 0, 1) solid;
+    border-left-width: 0;
+    height: 2em;
+    box-shadow: 0 0 15px rgba(255, 255, 0, 0.747);
+}
+
+#ourAdvantages .advantages p {
+    display: block;
+}
+
+#ourAdvantages {
+    margin-top: 5.5em;
+}
+
+.offersContainerResizer {
+    width: 90%;
+    margin-bottom: 10rem;
+}
+
+.rightPush {
+    margin-left: 10em;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#finalMessage {
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    flex-wrap: nowrap;
+}
+
+#finalMessageCard {
+    text-align: center;
+    color: white;
+    padding: 2rem;
+    border: 0.2em rgba(255, 255, 0, 1) solid;
+    box-shadow: 0 0 15px rgba(255, 255, 0, 0.747);
+    border-radius: 0 15rem 15rem 15rem;
+    font-size: 1.3rem;
+    font-weight: 800;
+    max-width: 30rem;
+}
+
+#finalMessageCard h2 {
+    text-transform: uppercase;
+    font-weight: 1000;
+    font-size: 1.9rem;
+    margin: 1rem;
+    color: yellow;
+}
+
+#finalMessageCard h3 {
+    margin: 1rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: yellow;
+}
+
+#finalMessageCard p::first-letter {
+    text-transform: uppercase;
+}
+
+#finalMessage img {
+
+    width: 20rem;
+    height: 30rem;
+}
+
+.extraGradient {
+    background: linear-gradient(to bottom, #ffffff00 0%, #25628d 100%);
+    border-bottom: 0.7rem #215a83 solid;
+    border-bottom-right-radius: 10rem;
+    border-bottom-left-radius: 10rem;
+}
+
+#contacts {
+    color: white;
+    text-align: center;
+    font-weight: 800;
+    justify-content: space-evenly;
+    font-size: 1.2rem;
+}
+
+#contacts h2 {
+    text-transform: capitalize;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+#contacts p span {
+    font-style: italic;
+    color: yellow;
+}
+
+#contacts p {
+    width: 100%;
+}
+
+#contacts h2+p {
+    font-size: 1.5rem;
+}
+
+.cardContact img {
+    margin-bottom: 1rem;
+    width: 50px;
+    height: 50px;
+}
+
+.allInitialCaps {
+    text-transform: capitalize;
+}
+
+.cardContact {
+    border-radius: 2rem;
+    padding: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin-top: 2em;
+    border: 0.1rem #4b7fb9 solid;
+    background-color: #4b7fb9;
+}
+
+.cardContact:hover {
+    border: 0.1rem #7db9e8 solid;
+}
+
+#contactLocation img+p {
+    margin-bottom: 0.5rem;
+}
+
+.flexCenterSelf {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#contacts p::first-letter {
+    text-transform: uppercase;
+}
+
+#googleMaps {
+    position: relative;
+    height: 25rem;
+    width: 100%;
+}
+
+#contactLocation {
+    margin-bottom: 2rem;
+}
+
+#googleMaps iframe {
+    /* position: absolute; */
+    display: block;
+    border: 1px solid red;
+    border: 0;
+    width: 100%;
+    height: 100%;
+    max-height: 25rem;
+}
+
+.overlay {
+    text-transform: capitalize;
+    font-size: 2rem;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.39);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    text-shadow: 0 0 3px #000000, 0 0 5px #fffb00;
+}
+
+.svgContainer {
+    /* width: 100%; */
+}
