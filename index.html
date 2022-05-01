@@ -5,6 +5,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;900&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
     <script type="text/javascript" src="js/index.js"></script>
@@ -13,7 +16,7 @@
 <body>
     <header>
         <nav> 
-            <img src="" alt="NetFSA Logo" id="logo">
+            <img src="imgs/LogoNETFSA.svg" alt="NetFSA Logo" id="logo">
             <ul>
                 <li><a>inicio</a></li>
                 <li><a>empresa</a></li>
@@ -36,12 +39,14 @@
     </header>
     <main>
         <section id="welcome" class="flex">
-            <div id="presentationWelcome">
-                <p>seja bem vindo a NETFSA <span>banda larga</span></p>
-                <p>internet rapida como você nunca viu</p>
-                <div id="buttonWelcomViabilidade" class="defaultButton yellowButton"><a>consultar viabilidade</a></div>
+            <div id="backgroundOverlay"class="flex">
+                <div id="presentationWelcome">
+                    <p>seja bem vindo a NETFSA <span>banda larga</span></p>
+                    <p class="smallFont">internet rapida como você nunca viu</p>
+                    <div id="buttonWelcomViabilidade" class="defaultButton yellowButton"><a>consultar viabilidade</a></div>
+                </div>
+                <img src="imgs/Welcome_WomanListeningMusic.png" alt="">
             </div>
-            <img src="imgs/welcomeHuman.png" alt="">
         </section>
         <div class="mainGradient flex">
             <section id="offers"class="flex">
@@ -55,10 +60,10 @@
                             <div id="offerCard01" class="offerCard">
                                 <h2>50 megas <span class="spanBlock">fibra optica</span></h2>
                                 <div class="imgDevicesAndUses">
-                                    <img src="" alt="">
-                                    <img src="" alt="">
-                                    <img src="" alt="">
-                                    <img src="" alt="">
+                                    <img src="imgs/OfferCardIcon_SmartPhone.svg" alt="">
+                                    <img src="imgs/OfferCardIcon_Computer.svg" alt="">
+                                    <img src="imgs/OfferCardIcon_GameConsole.svg" alt="">
+                                    <img src="imgs/OfferCardIcon_HDVideo.svg" alt="">
                                 </div>
                                 <p>alta velocidade <span class="spanBlock">50% upload</span></p>
                                 <p class="smallFontCard">por apenas <span class="priceCard">R$ 79,90</span></p>
@@ -67,10 +72,10 @@
                             <div id="offerCard02" class="offerCard">
                                 <h2>200 megas <span class="spanBlock">fibra optica</span></h2>
                                 <div class="imgDevicesAndUses">
-                                    <img src="" alt="">
-                                    <img src="" alt="">
-                                    <img src="" alt="">
-                                    <img src="" alt="">
+                                    <img src="imgs/OfferCardIcon_SmartPhone.svg" alt="">
+                                    <img src="imgs/OfferCardIcon_Computer.svg" alt="">
+                                    <img src="imgs/OfferCardIcon_GameConsole.svg" alt="">
+                                    <img src="imgs/OfferCardIcon_HDVideo.svg" alt="">
                                 </div>
                                 <p>alta velocidade <span class="spanBlock">50% upload</span></p>
                                 <p class="smallFontCard">por apenas <span class="priceCard">R$ 99,90</span></p>
@@ -79,10 +84,10 @@
                             <div id="offerCard03" class="offerCard">
                                 <h2>50 megas <span class="spanBlock">fibra optica</span></h2>
                                 <div class="imgDevicesAndUses">
-                                    <img src="" alt="">
-                                    <img src="" alt="">
-                                    <img src="" alt="">
-                                    <img src="" alt="">
+                                    <img src="imgs/OfferCardIcon_SmartPhone.svg" alt="">
+                                    <img src="imgs/OfferCardIcon_Computer.svg" alt="">
+                                    <img src="imgs/OfferCardIcon_GameConsole.svg" alt="">
+                                    <img src="imgs/OfferCardIcon_HDVideo.svg" alt="">
                                 </div>
                                 <p>alta velocidade <span class="spanBlock">50% upload</span></p>
                                 <p class="smallFontCard">por apenas <span class="priceCard">R$ 79,90</span></p>
@@ -94,10 +99,10 @@
                         <div id="ourAdvantages" class="flex">
                             <div class="advantages flex">
                                 <div class="flex">
-                                    <img src="" alt="">
+                                    <img src="imgs/Advantages_24HSupport.svg" alt="">
                                     <span class="spanBlock">atendimento 24 h</span>
                                 </div>
-                                <img class="advantageArrow" src="" alt="">
+                                <img class="advantageArrow" src="imgs/Advantages_Arrow.svg" alt="">
                                 <span>garantimos um atendimento rapido, pratico, sem burocracia e com total respeito aos nossos clientes. Conte conosco para o melhor serviço de internet.</span>
                             </div>
                             <div class="flexLineBreaker"></div>
@@ -105,9 +110,9 @@
                             <div class="flexLineBreaker"></div>
                             <div class="advantages rightPush flex">
                                 <span>garantimos a velocidade entre o cliente e a operadora sem queda de conexão ou lentidão na sua internet, tornando a sua tranquilidade e felicidade a nossa!</span>
-                                <img class="advantageArrow" src="" alt=""> 
+                                <img class="advantageArrow" src="imgs/Advantages_Arrow.svg" alt=""> 
                                 <div class="flex">
-                                    <img src="" alt="">
+                                    <img src="imgs/Advantages_ConnectionSpeed.svg" alt="">
                                     <span class="spanBlock">velocidade <span class="spanBlock">de conexão</span></span>
                                 </div>
                             </div>
@@ -116,17 +121,17 @@
                             <div class="flexLineBreaker"></div>
                             <div class="advantages flex">
                                 <div class="flex">
-                                    <img src="" alt="">
+                                    <img src="imgs/Advantages_HumanSupport.svg" alt="">
                                     <span class="spanBlock">atendimento <span class="spanBlock">sem robô</span></span>
                                 </div>
-                                <img class="advantageArrow" src="" alt="">
+                                <img class="advantageArrow" src="imgs/Advantages_Arrow.svg" alt="">
                                 <span>atendimento 100% humanizado, nossa equipe é especializada em dar o atendimento necessário para resolver o seu problema.</span>
                             </div>
                         </div>
                     </div>
                 </div>    
                 <section id="finalMessage"class="flex">
-                    <img src="" alt="">
+                    <img src="imgs/ClientIsOurTreasure.svg" alt="">
                     <div id="finalMessageCard">
                         <h2>nossos clientes <span class="spanBlock">nossa maior riqueza</span></h2>
                         <p>nosso objetivo é deixar o nosso cliente feliz e com total segurança do serviço contratado. garantimos total confiabilidade e a entrega dos nossos serviços.</p>
@@ -143,19 +148,19 @@
                 <h2>contato</h2>
                 <p>entre em contato conosco e conheça mais sobre a <span>NETFSA</span></p>
                 <div id="contactEmail" class="cardContact">
-                    <img src="" alt="">
+                    <img src="imgs/Contacts_Email.svg" alt="">
                     <p>contato@netfsa.com.br</p>
                 </div>
                 <div id="contactPhone" class="cardContact">
-                    <img src="" alt="">
+                    <img src="imgs/Contacts_Phone.svg" alt="">
                     <p>+71 985 652 545</p>
                 </div>
                 <div id="contactInstagram" class="cardContact">
-                    <img src="" alt="">
+                    <img src="imgs/Contacts_Instagram.svg" alt="">
                     <p>@netfsa_banda_larga</p>
                 </div>
                 <div id="contactLocation" class="cardContact flexCenterSelf allInitialCaps">
-                    <img src="" alt="">
+                    <img src="imgs/Contacts_Location.svg" alt="">
                     <p>nosso endereço</p>
                     <p>rua amado bahia, nº 212, tomba, feira de santana - bahia</p>
                 </div>
