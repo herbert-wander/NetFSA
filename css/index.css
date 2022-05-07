@@ -18,9 +18,14 @@ html {
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
 }
-
+#headerNav
+{
+    position: sticky;
+    top: 0;
+}
 nav {
     background-color: #1A8BCE;
+    width: 100%;   
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -32,7 +37,6 @@ nav {
 
 nav ul {
     text-decoration: none;
-    display: flex;
 }
 
 nav ul li {
@@ -116,27 +120,11 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
-#welcome {
-    background-image: url(../imgs/Welcome_carrousel_03.svg);
-    background-size: cover;
-    max-height: 908px;
-}
-
-#welcome img {
-    max-height: 813px;
-    margin-top: 110px;
-    max-width: 530px;
-}
-
-#backgroundOverlay {
-    width: 100%;
-    background: linear-gradient(to right, rgba(28, 32, 125, 0.5) 0%, rgba(23, 31, 201, 0.76) 50%, rgba(27, 40, 189, 1) 100%);
-}
-
 #presentationWelcome {
-    margin-left: 2em;
+    padding-left: 2rem;
+    flex: 1;
     font-size: 2.36em;
-    font-weight: 700 bold;
+    font-weight: 700;
     text-transform: uppercase;
     color: white;
 }
@@ -150,13 +138,54 @@ nav ul li a:hover {
     color: #FEF212;
 }
 
+#welcome
+{
+    overflow: hidden;
+    height: 65vh;
+    justify-content: flex-start; 
+    flex-wrap: nowrap;
+}
+.carrouselBackground
+{
+    min-width: 100vw;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;  
+    max-height: 65vh;
+    position: absolute;
+    background-position: center;  
+}
+#carrousel01 {
+
+    background-image: url(../imgs/Welcome_carrousel_01.svg);
+    animation: slide 33s linear infinite;
+    justify-content: flex-start;  
+}
+
+#carrousel02
+{
+    animation: slide2 33s linear infinite;
+    background-image: url(../imgs/Welcome_carrousel_02.svg);
+    
+    
+}
+#carrousel03
+{
+    animation: slide3 33s linear infinite;
+    background-image: url(../imgs/Welcome_carrousel_03.svg);
+}
+
 #buttonWelcomViabilidade {
     /* display:; */
-    font-size: 0.8em;
-    max-width: 50%;
-    margin-top: 0.5em;
-    padding: 0.25em;
-    font-weight: 600;
+    
+    border: 1px;
+    border-radius: 20px;
+    font-size: 1.3rem;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    font-weight: 900;
 }
 
 #buttonWelcomViabilidade:hover {
@@ -183,15 +212,12 @@ nav ul li a:hover {
 
 #offersCards {
     margin-top: 4em;
-    display: flex;
-    justify-content: center;
     text-transform: uppercase;
     width: 100%;
 }
 
 .mainGradient {
     background: linear-gradient(to bottom, #052A40 1%, #285874 50%, #44ADE9 100%);
-
 }
 
 #offerCard02 {
@@ -285,12 +311,12 @@ nav ul li a:hover {
 }
 
 #ourAdvantages .advantages {
-    max-width: 75%;
+    max-width: 80%;
+    
     border: 0.2em rgba(255, 255, 0, 1) solid;
     box-shadow: 0 0 15px rgba(255, 255, 0, 0.747);
     color: white;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
+    justify-content: space-around;
     font-size: 1.5em;
     padding: 2em;
     text-transform: initial;
@@ -319,17 +345,25 @@ nav ul li a:hover {
 }
 
 .advantagesSeparator {
-    border: 0.2em rgba(255, 255, 0, 1) solid;
+    border: 0;
+    border-right: 0.25em rgba(255, 255, 0, 1) solid;
     border-left-width: 0;
     height: 2em;
     box-shadow: 0 0 15px rgba(255, 255, 0, 0.747);
 }
 
-#ourAdvantages .advantages p {
-    display: block;
+.advantages p
+{
+    flex: 1;
+}
+
+#ourAdvantages p::first-letter {
+    text-transform: uppercase;
 }
 
 #ourAdvantages {
+    flex: 1;
+    width: 100%;
     margin-top: 5.5em;
 }
 
@@ -354,7 +388,6 @@ nav ul li a:hover {
     width: 100%;
     margin-top: 2rem;
     margin-bottom: 3rem;
-    flex-wrap: nowrap;
 }
 
 #finalMessageCard {
@@ -367,6 +400,8 @@ nav ul li a:hover {
     font-size: 1.3rem;
     font-weight: 800;
     max-width: 30rem;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
 }
 
 #finalMessageCard h2 {
@@ -405,12 +440,16 @@ nav ul li a:hover {
 #contacts {
     color: white;
     text-align: center;
-    margin-top: ;
+    margin-top: 2rem;
     font-weight: 800;
-    justify-content: space-evenly;
     font-size: 1.2rem;
 }
-
+.contactsBox
+{
+    justify-content: space-evenly;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+}
 #contacts h2 {
     text-transform: capitalize;
     font-size: 2rem;
@@ -498,14 +537,25 @@ nav ul li a:hover {
     width: 100%;
     text-shadow: 0 0 3px #000000, 0 0 5px #fffb00;
 }
-
-.svgContainer {
-    /* width: 100%; */
-}
 #faq
 {
     width: 70%;
     color: white;
+}
+#faq h2
+{
+    font-style: italic;
+    margin-top: 2rem;
+    font-weight: 800;
+    font-size: 2.5rem;
+}
+#faq h2+span
+{
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
 }
 #faqCenterAndLeft
 {
@@ -519,10 +569,6 @@ nav ul li a:hover {
     margin-bottom: 12px;
     color: #F2DE0B;
     text-transform: capitalize;
-}
-#faq span
-{
-    
 }
 #faq img
 {
@@ -582,8 +628,8 @@ nav ul li a:hover {
 }
 #dealsFrame
 {
-    position: absolute;
-    visibility: hidden;
+    display: none;
+    color: #FFE500;
     width: 100%;
     background: linear-gradient(to bottom, #1374AB 1%, #0F96E3 50%, #44ADE9 100%);
 }
@@ -599,8 +645,235 @@ nav ul li a:hover {
 }
 .cardDealOffer
 {
+    justify-content: space-around;
     padding-top: 2rem;
     padding-bottom: 3.3rem;
     width: 80%;
     border-top: 3px solid #1C1F65;
+}
+.dealTitleOffer
+{
+    font-weight: 900;
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+.dealsFeaturesIconsBox
+{
+    max-height: 56px;
+    align-items: center;
+}
+.dealsFeaturesIconsBox img,.dealsFeaturesIconsBox  span
+{
+    margin-right: 1.1rem;
+}
+.dealsFeaturesIconsBox img,.dealsFeaturesIconsBox  span
+{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.dealPlusSign
+{
+    font-weight: 900;
+    font-size: 1.6rem;
+    color: #FA5D10;
+}
+.dealPriceContract
+{
+    text-align: center;
+    max-width: 9rem;
+}
+.dealPriceContract span
+{
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+.dealPriceContract .dealPriceExta
+{
+    font-weight: 500;
+    font-size: 1.9rem;
+}
+.dealButton
+{
+    margin-top: 0.7rem;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    border: 1px black solid;
+    font-weight: 900;
+    color: white;
+    border-radius: 1.2rem;
+    background: linear-gradient(to bottom, rgba(0, 17, 156, 0) 0%, rgba(20, 27, 82, 0.63) 100%);
+    padding: 0.4rem 0.7rem 0.5rem 0.7rem;
+}
+.titleOfferContainer img
+{
+    margin-left: 0.9rem;
+}
+@-webkit-keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+.hero-waves {
+  display: block;
+  margin-top: 60px;
+  width: 100%;
+  height: 60px;
+  z-index: 5;
+  position: relative;
+}
+
+.wave1 use {
+  -webkit-animation: move-forever1 10s linear infinite;
+  animation: move-forever1 10s linear infinite;
+  -webkit-animation-delay: -2s;
+  animation-delay: -2s;
+}
+
+.wave2 use {
+  -webkit-animation: move-forever2 8s linear infinite;
+  animation: move-forever2 8s linear infinite;
+  -webkit-animation-delay: -2s;
+  animation-delay: -2s;
+}
+
+.wave3 use {
+  -webkit-animation: move-forever3 6s linear infinite;
+  animation: move-forever3 6s linear infinite;
+  -webkit-animation-delay: -2s;
+  animation-delay: -2s;
+}
+
+@keyframes slide {
+    0%{
+        left: 0;
+    }
+  27.27%{
+    left: 0;
+  }
+  33.33%{
+    left: -100vw;
+  }
+  33.331% {
+    visibility: hidden;
+    left: 100vw;
+  }
+  90.91%
+  {
+    visibility: visible;
+    left: 100vw;
+  }
+  100%
+  {
+      left: 0;
+  }
+}
+@keyframes slide2 {
+    0%{
+        left: 100vw;
+    }
+  27.27%{
+    left: 100vw;
+  }
+  33.33%{
+    left: 0;
+  }
+  60.61% {
+    left: 0;
+  }
+  66.67%{
+    left: -100vw;
+  }
+  66.68%
+  {   
+    left: 100vw;
+  }
+  100%
+  {
+    visibility: visible;
+    left: 100vw;
+  }
+}
+@keyframes slide3 {
+    0%{
+        left: 100vw;
+    }
+  60.61%{
+    left: 100vw;
+  }
+  66.67%
+  {
+    left: 0;
+  }
+  90.91%
+  {
+    left: 0;
+  }
+  100%
+  {
+    left: -100vw;
+  }
+}
+
+@-webkit-keyframes move-forever1 {
+  0% {
+    transform: translate(85px, 0%);
+  }
+  100% {
+    transform: translate(-90px, 0%);
+  }
+}
+
+@keyframes move-forever1 {
+  0% {
+    transform: translate(85px, 0%);
+  }
+  100% {
+    transform: translate(-90px, 0%);
+  }
+}
+@-webkit-keyframes move-forever2 {
+  0% {
+    transform: translate(-90px, 0%);
+  }
+  100% {
+    transform: translate(85px, 0%);
+  }
+}
+@keyframes move-forever2 {
+  0% {
+    transform: translate(-90px, 0%);
+  }
+  100% {
+    transform: translate(85px, 0%);
+  }
+}
+@-webkit-keyframes move-forever3 {
+  0% {
+    transform: translate(-90px, 0%);
+  }
+  100% {
+    transform: translate(85px, 0%);
+  }
+}
+@keyframes move-forever3 {
+  0% {
+    transform: translate(-90px, 0%);
+  }
+  100% {
+    transform: translate(85px, 0%);
+  }
 }
