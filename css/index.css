@@ -10,8 +10,10 @@
     margin-left: 100px;
     margin-top: 10px;
     margin-bottom: 15px;
-    max-height: 130px;
+    max-height: 70px;
     max-width: 100px;
+    max-width: 100%;
+    height: 100%;
 }
 
 html {
@@ -21,11 +23,13 @@ html {
 #headerNav
 {
     position: sticky;
+    z-index: 3;
     top: 0;
 }
 nav {
     background-color: #1A8BCE;
-    width: 100%;   
+
+    width: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -34,7 +38,6 @@ nav {
     font-weight: 900;
     text-transform: uppercase;
 }
-
 nav ul {
     text-decoration: none;
 }
@@ -137,47 +140,60 @@ nav ul li a:hover {
 #presentationWelcome span {
     color: #FEF212;
 }
-
+body
+{
+    left: 0;
+    overflow-x: hidden;
+}
 #welcome
 {
-    overflow: hidden;
-    height: 65vh;
-    justify-content: flex-start; 
+    z-index: 2;
+    max-width: 100vw;
+    position: relative;
+    max-height: 65vh;
+    height: 100%;
+    justify-content: flex-start;
     flex-wrap: nowrap;
 }
 .carrouselBackground
 {
-    min-width: 100vw;
+    
+    width: 100%;
     height: 100%;
+    max-width: 100vw;
+    overflow: hidden;
     background-repeat: no-repeat;
-    background-size: cover;  
-    max-height: 65vh;
+    background-size: cover;
     position: absolute;
-    background-position: center;  
+    background-position: center;
 }
 #carrousel01 {
 
     background-image: url(../imgs/Welcome_carrousel_01.svg);
-    animation: slide 33s linear infinite;
-    justify-content: flex-start;  
+    animation: slide 33s ease infinite;
+    justify-content: flex-start;
 }
 
 #carrousel02
 {
-    animation: slide2 33s linear infinite;
+    animation: slide2 33s ease infinite;
     background-image: url(../imgs/Welcome_carrousel_02.svg);
-    
-    
+
 }
 #carrousel03
 {
-    animation: slide3 33s linear infinite;
+    animation: slide3 33s ease infinite;
     background-image: url(../imgs/Welcome_carrousel_03.svg);
 }
 
+#carrousel03 a
+{
+    width: 100%;
+    height: 100%;
+}
 #buttonWelcomViabilidade {
     /* display:; */
-    
+
     border: 1px;
     border-radius: 20px;
     font-size: 1.3rem;
@@ -196,6 +212,23 @@ nav ul li a:hover {
 #buttonWelcomViabilidade a {
     display: block;
     text-align: center;
+}
+
+.dealSlideFX
+{
+    animation: dealSlide 1.5s ease 1 forwards;
+}
+.closeDealSlideFX
+{
+    animation: closeDealSlide 1.5s ease 1 forwards;
+}
+.dealSlideButtonFX
+{
+    animation: dealSlideButton 1.5s ease 1 forwards;
+}
+.closeDealSlideButtonFX
+{
+    animation: closeDealSlideButton 1.5s ease 1 forwards;
 }
 
 #separatorStart {
@@ -312,7 +345,7 @@ nav ul li a:hover {
 
 #ourAdvantages .advantages {
     max-width: 80%;
-    
+
     border: 0.2em rgba(255, 255, 0, 1) solid;
     box-shadow: 0 0 15px rgba(255, 255, 0, 0.747);
     color: white;
@@ -584,12 +617,12 @@ nav ul li a:hover {
     font-weight: 600;
     font-size: 1.4rem;
     margin: 0.8rem;
-    width: 100%;    
+    width: 100%;
 }
 .faqBoxEffect
 {
     background-color: white;
-    padding: 5px;   
+    padding: 5px;
     padding-left: 3rem;
     border-radius: 5px;
     border: solid 0px;
@@ -604,7 +637,7 @@ nav ul li a:hover {
     margin-bottom: 0.2rem;
     max-width: 900px;
     flex-wrap: nowrap;
-    
+
 }
 .answerFaq
 {
@@ -629,9 +662,31 @@ nav ul li a:hover {
 #dealsFrame
 {
     display: none;
+    z-index: 4; 
+    position: fixed;
+    left: -100%;
     color: #FFE500;
     width: 100%;
+    top: 0;
+    height: 100%;
     background: linear-gradient(to bottom, #1374AB 1%, #0F96E3 50%, #44ADE9 100%);
+}
+#closeDealsFrame
+{
+    height: 5vh;
+    width: 5vw;
+    position: fixed;
+    top: 2vh;
+    left: 90vw;
+    padding: 0.3rem;
+    font-size: 2.5rem;
+    background-color: #0C5884;
+    border-radius: 5rem;
+    font-weight: 900;
+    text-align: center;
+    color: white;
+    border: 1px solid #dbd823;
+    cursor: pointer;
 }
 #cardsDealContainer
 {
@@ -757,6 +812,45 @@ nav ul li a:hover {
   animation-delay: -2s;
 }
 
+@keyframes dealSlide {
+    0%{
+        left: -100%;
+    }
+    100%
+    {
+        left: 0;
+    }
+}
+
+@keyframes closeDealSlide {
+    0%{
+        left: 0%;
+    }
+    100%
+    {
+        left: -100%;
+    }
+}
+@keyframes dealSlideButton {
+    0%{
+        left: -10vw;
+    }
+    100%
+    {
+        left: 90vw;
+    }
+}
+
+@keyframes closeDealSlideButton {
+    0%{
+        left: 90vw;
+    }
+    100%
+    {
+        left: -10vw;
+    }
+}
+
 @keyframes slide {
     0%{
         left: 0;
@@ -765,16 +859,16 @@ nav ul li a:hover {
     left: 0;
   }
   33.33%{
-    left: -100vw;
+    left: -100%;
   }
   33.331% {
     visibility: hidden;
-    left: 100vw;
+    left: 100%;
   }
   90.91%
   {
     visibility: visible;
-    left: 100vw;
+    left: 100%;
   }
   100%
   {
@@ -783,10 +877,10 @@ nav ul li a:hover {
 }
 @keyframes slide2 {
     0%{
-        left: 100vw;
+        left: 100%;
     }
   27.27%{
-    left: 100vw;
+    left: 100%;
   }
   33.33%{
     left: 0;
@@ -795,24 +889,24 @@ nav ul li a:hover {
     left: 0;
   }
   66.67%{
-    left: -100vw;
+    left: -100%;
   }
   66.68%
-  {   
-    left: 100vw;
+  {
+    left: 100%;
   }
   100%
   {
     visibility: visible;
-    left: 100vw;
+    left: 100%;
   }
 }
 @keyframes slide3 {
     0%{
-        left: 100vw;
+        left: 100%;
     }
   60.61%{
-    left: 100vw;
+    left: 100%;
   }
   66.67%
   {
@@ -824,7 +918,7 @@ nav ul li a:hover {
   }
   100%
   {
-    left: -100vw;
+    left: -100%;
   }
 }
 
@@ -876,4 +970,16 @@ nav ul li a:hover {
   100% {
     transform: translate(85px, 0%);
   }
+}
+footer
+{
+    width: 100%;
+    background-color: white;
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+}
+#footer
+{
+    width: 100%;
+    justify-content: space-around;
 }
