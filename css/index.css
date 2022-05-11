@@ -10,15 +10,19 @@
     margin-left: 100px;
     margin-top: 10px;
     margin-bottom: 15px;
+    
+}
+#logo img
+{
     max-height: 70px;
     max-width: 100px;
-    max-width: 100%;
+    width: 100%;
     height: 100%;
 }
-
 html {
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
+    scroll-behavior: smooth;
 }
 #headerNav
 {
@@ -38,18 +42,23 @@ nav {
     font-weight: 900;
     text-transform: uppercase;
 }
-nav ul {
+
+.navCorrection
+{
+    color: #E4D71C;
     text-decoration: none;
 }
-
+.navCorrection:visited
+{
+    color: #E4D71C;
+}
+.navCorrection:hover
+{
+    color: whitesmoke;
+}
 nav ul li {
     padding: 0 0.5em 0 0.5em;
     display: inline-block;
-}
-
-nav ul li a:hover {
-    cursor: pointer;
-    color: whitesmoke;
 }
 
 #servicesMenu {
@@ -97,7 +106,12 @@ nav ul li a:hover {
 #dropDowServices li a {
     color: white;
     padding: 1em 1em 1em 0.4em;
+    text-decoration: none;
     display: block;
+}
+
+#dropDowServices li a:visited {
+    color: white;
 }
 
 #dropDowServices li a:hover {
@@ -114,6 +128,7 @@ nav ul li a:hover {
 
 .defaultButton {
     color: #00176B;
+    text-align: center;
     border-radius: 1em;
     padding: 0.5em;
     font-size: 20px;
@@ -121,6 +136,13 @@ nav ul li a:hover {
     text-transform: uppercase;
     background-color: #FFE500;
     cursor: pointer;
+}
+.defaultButton a{
+    color: #00176B;
+    text-decoration: none;
+}
+.defaultButton a:visited{
+    color: #00176B;
 }
 
 #presentationWelcome {
@@ -150,7 +172,6 @@ body
     z-index: 2;
     max-width: 100vw;
     position: relative;
-    max-height: 65vh;
     height: 100%;
     justify-content: flex-start;
     flex-wrap: nowrap;
@@ -163,7 +184,7 @@ body
     max-width: 100vw;
     overflow: hidden;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     position: absolute;
     background-position: center;
 }
@@ -281,6 +302,7 @@ body
     font-size: 0.75em;
     cursor: pointer;
     text-transform: uppercase;
+    text-decoration: none;
     margin-top: 0.7em;
     border: 1px black solid;
     font-weight: 800;
@@ -289,6 +311,10 @@ body
     background: linear-gradient(to bottom, rgba(0, 17, 156, 0.25) 1%, rgba(20, 27, 82, 0.63) 100%);
     padding: 0.5em 0.7em 0.5em 0.7em;
 
+}
+.buttonOfferCard:visited
+{
+    color: white;
 }
 
 .buttonOfferCard:hover {
@@ -515,19 +541,38 @@ body
 
 .cardContact {
     border-radius: 2rem;
-    padding: 2rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
     margin-top: 2em;
     border: 0.1rem #4b7fb9 solid;
     background-color: rgb(32, 122, 173);
+}
+
+.cardContact a
+{
+    padding: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    text-decoration: none;
+    justify-content: center;
+    color: white;
+    width: 100%;
+    height: 100%;
+}
+#contactLocation
+{
+    padding: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+.cardContact a:visited
+{
+    color: white;
 }
 
 .cardContact:hover {
     border: 0.1rem #7db9e8 solid;
 }
 
-#contactLocation img+p {
+#contactLocation img+span {
     margin-bottom: 0.5rem;
 }
 
@@ -673,8 +718,8 @@ body
 }
 #closeDealsFrame
 {
-    height: 5vh;
-    width: 5vw;
+    height: 50px;
+    width: 50px;
     position: fixed;
     top: 2vh;
     left: 90vw;
@@ -753,8 +798,10 @@ body
     margin-top: 0.7rem;
     font-size: 1rem;
     cursor: pointer;
+    padding: 0.7rem;
     text-transform: uppercase;
     border: 1px black solid;
+    text-decoration: none;
     font-weight: 900;
     color: white;
     border-radius: 1.2rem;
@@ -975,11 +1022,85 @@ footer
 {
     width: 100%;
     background-color: white;
-    padding-top: 4.5rem;
-    padding-bottom: 4.5rem;
+    padding-top: 3.5rem;
 }
 #footer
 {
-    width: 100%;
+    width: 98%;
+    align-items: flex-start;
     justify-content: space-around;
+}
+#footer a
+{
+    text-decoration: none;
+    font-weight: 500;
+    color: #616161;
+}
+#footer a:visited
+{
+    color: #616161;
+}
+#footer a:hover
+{
+    color: #1F97DC;
+}
+#footer li
+{
+    padding-bottom: 0.5rem;
+}
+h4
+{
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+#footer span
+{
+    font-weight: 400;
+    color: #616161;
+}
+#footer li i
+{
+    color: #0F96E3;
+}
+.instaFooter
+{
+    justify-content: flex-start;
+}
+.instaFooter a
+{
+    margin: 0.5rem;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    background-image: url(../imgs/InstagramIcon.svg);
+    background-size: cover;
+}
+#finalFooter
+{
+    width: 100%;
+    margin-top: 2rem;
+    background-color: #0f95e356;
+}
+.finalFooterContainer
+{
+    margin: 0.6rem;
+    color: #000000;
+    width: 85%;
+    font-weight: 400;
+    font-size: 1rem;
+    justify-content: space-between;
+}
+.finalFooterContainer a
+{
+    color: #0F96E3;
+    font-weight: 500;
+    text-decoration: none;
+}
+.finalFooterContainer a:visited
+{
+    color: #0F96E3;
+}
+.finalFooterContainer a:hover
+{
+    color: #0F96E3;
 }

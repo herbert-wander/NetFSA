@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="imgs/favicon.png" rel="icon">
+    <link href="imgs/AppleTouchIcon.png" rel="apple-touch-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -11,33 +13,33 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;900&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <script type="text/javascript" src="js/index.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>NETFSA - Internet Fibra Óptica</title>
 </head>
 
-<body>
+<body id="body">
     <header id="headerNav" class="flex">
         <nav>
-            <img src="imgs/LogoNETFSA.svg" alt="NetFSA Logo" id="logo">
+            <a href="index.html" id="logo"><img src="imgs/LogoNETFSA.svg" alt="NetFSA Logo"></a>
             <ul class="flex">
-                <li><a>inicio</a></li>
-                <li><a>empresa</a></li>
-                <li><a>planos</a></li>
-                <li id="servicesMenu"><a>serviços</a>
+                <li><a href="#body" class="navCorrection navScrollFix">inicio</a></li>
+                <li><a href="#ourAdvantages" class="navCorrection navScrollFix">empresa</a></li>
+                <li><a href="#offers" class="navCorrection navScrollFix">planos</a></li>
+                <li id="servicesMenu" class="navCorrection navScrollFix"><a>serviços</a>
                     <ul id="dropDowServices">
-                        <li><a>2 via do boleto</a></li>
-                        <li><a>contrato</a></li>
-                        <li><a>speedtest</a></li>
-                        <li><a>viabilidade</a></li>
+                        <li><a href="https://netfsa.com.br/central_assinante_web">2 via do boleto</a></li>
+                        <li><a href="https://www.netfsa.com.br/contrato_netfsa.pdf">contrato</a></li>
+                        <li><a href="http://ixcsoft.speedtestcustom.com/">speedtest</a></li>
+                        <li><a href="https://www.netfsa.com.br/viabilidade-tecnica.php">viabilidade</a></li>
                     </ul>
                 </li>
-                <li><a>contato</a></li>
+                <li><a href="#contacts" class="navCorrection navScrollFix">contato</a></li>
             </ul>
-            <div id="buttonClientCentral" class="defaultButton">
-                <a>central do assinante</a>
+            <div id="buttonClientCentral" class="defaultButton flex">
+                <a href="https://netfsa.com.br/central_assinante_web" target="_blank">central do assinante</a>
             </div>
-
         </nav>
     </header>
     <main>
@@ -46,7 +48,9 @@
                 <div id="presentationWelcome">
                     <p>seja bem vindo a NETFSA <span>banda larga</span></p>
                     <p class="smallFont">internet rapida como você nunca viu</p>
-                    <button id="buttonWelcomViabilidade" class="defaultButton yellowButton">consultar viabilidade
+                    <button id="buttonWelcomViabilidade" class="defaultButton flex yellowButton"><a
+                            href="https://netfsa.com.br/viabilidade-tecnica.php">consultar
+                            viabilidade</a>
                     </button>
                 </div>
             </div>
@@ -75,9 +79,33 @@
                     <div class="dealPriceContract flex">
                         <span>por apenas</span>
                         <span class="dealPriceExta">R$ 49,90</span>
-                        <button class="dealButton">
-                            Contratar
-                        </button>
+                        <a class="dealButton" href="" target="_blank">Contratar</a>
+                    </div>
+                </div>
+                <div class="cardDealOffer flex">
+                    <div class="titleOfferContainer flex">
+                        <span class="dealTitleOffer">35 megas <br>fibra optica</span>
+                        <img src="imgs/MoreOffers_Arrow.svg" alt="">
+                    </div>
+                    <div class="dealsFeaturesIconsBox flex">
+                        <img src="imgs/OfferCardIcon_SmartPhone.svg" alt="">
+                        <img src="imgs/OfferCardIcon_Computer.svg" alt="">
+                        <img src="imgs/OfferCardIcon_GameConsole.svg" alt="">
+                        <img src="imgs/OfferCardIcon_HDVideo.svg" alt="">
+                        <img src="imgs/MoreOffers_Wifi.svg" alt="">
+                        <span class="dealPlusSign">+</span>
+                        <!-- https://api.whatsapp.com/send?phone=557530222334&text= -->
+                        <img src="imgs/MoreOffers_Tv.svg" alt="">
+                        <span>Gratis</span>
+                    </div>
+                    <div class="dealPriceContract flex">
+                        <span>por apenas</span>
+                        <span class="dealPriceExta">R$ 49,90</span>
+
+                        <a class="dealButton"
+                            href="https://api.whatsapp.com/send?phone=557530222334&text=Opa quero compra essa paraa ae"
+                            target="_blank">Contratar</a>
+
                     </div>
                 </div>
                 <div class="cardDealOffer flex">
@@ -98,9 +126,7 @@
                     <div class="dealPriceContract flex">
                         <span>por apenas</span>
                         <span class="dealPriceExta">R$ 49,90</span>
-                        <button class="dealButton">
-                            Contratar
-                        </button>
+                        <a class="dealButton" href="" target="_blank">Contratar</a>
                     </div>
                 </div>
                 <div class="cardDealOffer flex">
@@ -121,9 +147,7 @@
                     <div class="dealPriceContract flex">
                         <span>por apenas</span>
                         <span class="dealPriceExta">R$ 49,90</span>
-                        <button class="dealButton">
-                            Contratar
-                        </button>
+                        <a class="dealButton" href="" target="_blank">Contratar</a>
                     </div>
                 </div>
                 <div class="cardDealOffer flex">
@@ -144,32 +168,7 @@
                     <div class="dealPriceContract flex">
                         <span>por apenas</span>
                         <span class="dealPriceExta">R$ 49,90</span>
-                        <button class="dealButton">
-                            Contratar
-                        </button>
-                    </div>
-                </div>
-                <div class="cardDealOffer flex">
-                    <div class="titleOfferContainer flex">
-                        <span class="dealTitleOffer">35 megas <br>fibra optica</span>
-                        <img src="imgs/MoreOffers_Arrow.svg" alt="">
-                    </div>
-                    <div class="dealsFeaturesIconsBox flex">
-                        <img src="imgs/OfferCardIcon_SmartPhone.svg" alt="">
-                        <img src="imgs/OfferCardIcon_Computer.svg" alt="">
-                        <img src="imgs/OfferCardIcon_GameConsole.svg" alt="">
-                        <img src="imgs/OfferCardIcon_HDVideo.svg" alt="">
-                        <img src="imgs/MoreOffers_Wifi.svg" alt="">
-                        <span class="dealPlusSign">+</span>
-                        <img src="imgs/MoreOffers_Tv.svg" alt="">
-                        <span>Gratis</span>
-                    </div>
-                    <div class="dealPriceContract flex">
-                        <span>por apenas</span>
-                        <span class="dealPriceExta">R$ 49,90</span>
-                        <button class="dealButton">
-                            Contratar
-                        </button>
+                        <a class="dealButton" href="" target="_blank">Contratar</a>
                     </div>
                 </div>
                 <div class="cardDealOffer flex cardDealBBorder">
@@ -190,9 +189,7 @@
                     <div class="dealPriceContract flex">
                         <span>por apenas</span>
                         <span class="dealPriceExta">R$ 49,90</span>
-                        <button class="dealButton">
-                            Contratar
-                        </button>
+                        <a class="dealButton" href="" target="_blank">Contratar</a>
                     </div>
                 </div>
             </div>
@@ -217,7 +214,7 @@
                                 </div>
                                 <p>alta velocidade <span class="spanBlock">50% upload</span></p>
                                 <p class="smallFontCard">por apenas <span class="priceCard">R$ 79,90</span></p>
-                                <a class="buttonOfferCard">contratar</a>
+                                <a class="buttonOfferCard" href="" target="_blank">contratar</a>
                             </div>
                             <div id="offerCard02" class="offerCard">
                                 <h2>200 megas <span class="spanBlock">fibra optica</span></h2>
@@ -229,7 +226,7 @@
                                 </div>
                                 <p>alta velocidade <span class="spanBlock">50% upload</span></p>
                                 <p class="smallFontCard">por apenas <span class="priceCard">R$ 99,90</span></p>
-                                <a class="buttonOfferCard">contratar</a>
+                                <a class="buttonOfferCard" href="" target="_blank">contratar</a>
                             </div>
                             <div id="offerCard03" class="offerCard">
                                 <h2>50 megas <span class="spanBlock">fibra optica</span></h2>
@@ -241,11 +238,11 @@
                                 </div>
                                 <p>alta velocidade <span class="spanBlock">50% upload</span></p>
                                 <p class="smallFontCard">por apenas <span class="priceCard">R$ 79,90</span></p>
-                                <a class="buttonOfferCard">contratar</a>
+                                <a class="buttonOfferCard" href="" target="_blank">contratar</a>
                             </div>
                         </div>
                         <div class="flexLineBreaker"></div>
-                        <a id="moreOffers" class="defaultButton yellowButton">ver mais planos</a>
+                        <a id="moreOffers" class="defaultButton flex yellowButton">ver mais planos</a>
                         <div class="flexLineBreaker"></div>
                         <div id="ourAdvantages" class="flex">
                             <div class="flex advantages">
@@ -380,22 +377,30 @@
                 <h2>contato</h2>
                 <p class="contactsBox">entre em contato conosco e conheça mais sobre a <span>NETFSA</span></p>
                 <div class="flex contactsBox">
-                    <div id="contactEmail" class="cardContact">
-                        <img src="imgs/Contacts_Email.svg" alt="">
-                        <p>contato@netfsa.com.br</p>
+                    <div id="contactEmail" class="cardContact flex">
+                        <a href="mailto:contato@netfsa.com.br"><img src="imgs/Contacts_Email.svg" alt="">
+                            <div class="flexLineBreaker"></div>
+                            <p>contato@netfsa.com.br</p>
+                        </a>
                     </div>
-                    <div id="contactPhone" class="cardContact">
-                        <img src="imgs/Contacts_Phone.svg" alt="">
-                        <p>+71 985 652 545</p>
+                    <div id="contactPhone" class="cardContact flex">
+                        <a href="tel:71985652545"><img src="imgs/Contacts_Phone.svg" alt="">
+                            <div class="flexLineBreaker"></div>
+                            <span>+71 985 652 545</span>
+                        </a>
                     </div>
-                    <div id="contactInstagram" class="cardContact">
-                        <img src="imgs/Contacts_Instagram.svg" alt="">
-                        <p>@netfsa_banda_larga</p>
+                    <div id="contactInstagram" class="cardContact flex">
+                        <a href="https://www.instagram.com/netfsa_fibra/" target="_blank" class="flex">
+                            <img src="imgs/Contacts_Instagram.svg" alt="">
+                            <div class="flexLineBreaker"></div>
+                            <span>@netfsa_fibra</span>
+                        </a>
                     </div>
                     <div class="flexLineBreaker"></div>
-                    <div id="contactLocation" class="cardContact flexCenterSelf allInitialCaps">
+                    <div id="contactLocation" class="cardContact flexCenterSelf allInitialCaps flex">
                         <img src="imgs/Contacts_Location.svg" alt="">
-                        <p>nosso endereço</p>
+                        <div class="flexLineBreaker"></div>
+                        <p>nosso endereço</p><br>
                         <p>rua amado bahia, nº 212, tomba, feira de santana - bahia</p>
                     </div>
                 </div>
@@ -409,10 +414,10 @@
             </section>
         </div>
     </main>
-    <footer>
+    <footer class="flex">
         <section id="footer" class="flex">
             <div class="">
-                <h3>NETFsa Banda Larga</h3>
+                <h4>NETFsa Banda Larga</h4>
                 <span>
                     R. Comendador Gomes, 1136, <br>
                     Tomba - Feira de Santana,<br>
@@ -424,10 +429,11 @@
             <div class="">
                 <h4>Links Úteis</h4>
                 <ul>
-                    <li><i class=""></i><a href="https://netfsa.com.br/">Início</a></li>
-                    <li><i class=""></i><a href="#">Empresa</a></li>
-                    <li><i class=""></i><a href="#planos">Planos</a></li>
-                    <li><i class=""></i><a href="https://netfsa.com.br/central_assinante_web">Central do Assinante</a>
+                    <li><i class="bx bx-chevron-right"></i><a href="https://netfsa.com.br/">Início</a></li>
+                    <li><i class="bx bx-chevron-right"></i><a href="#">Empresa</a></li>
+                    <li><i class="bx bx-chevron-right"></i><a href="#planos">Planos</a></li>
+                    <li><i class="bx bx-chevron-right"></i><a href="https://netfsa.com.br/central_assinante_web">Central
+                            do Assinante</a>
                     </li>
                     <li><i class="bx bx-chevron-right"></i><a
                             href="https://www.netfsa.com.br/contrato_netfsa.pdf">Contrato</a></li>
@@ -436,18 +442,27 @@
             <div class="">
                 <h4>Serviços</h4>
                 <ul>
-                    <li><i class=""></i><a href="https://netfsa.com.br/central_assinante_web">2ª via de Boleto</a></li>
-                    <li><i class=""></i><a href="http://ixcsoft.speedtestcustom.com/">Speedtest</a></li>
-                    <li><i class=""></i><a href="https://netfsa.com.br/viabilidade-tecnica.php">Consultar
+                    <li><i class="bx bx-chevron-right"></i><a href="https://netfsa.com.br/central_assinante_web">2ª via
+                            de Boleto</a></li>
+                    <li><i class="bx bx-chevron-right"></i><a href="http://ixcsoft.speedtestcustom.com/">Speedtest</a>
+                    </li>
+                    <li><i class="bx bx-chevron-right"></i><a
+                            href="https://netfsa.com.br/viabilidade-tecnica.php">Consultar
                             Viabilidade</a></li>
                 </ul>
             </div>
             <div class="">
                 <h4>Siga-nos</h4>
                 <p>Siga-nos em nossas redes sociais para ficar por dentro das novidades</p>
-                <div class="">
-                    <a href="https://instagram.com/netfsa_banda_larga" class=""><i class=""></i></a>
+                <div class="instaFooter flex">
+                    <a href="https://www.instagram.com/netfsa_fibra/" class=""></a>
                 </div>
+            </div>
+        </section>
+        <section id="finalFooter" class="flex">
+            <div class="finalFooterContainer flex">
+                <span>© Copyright <strong>NetFSA.</strong> Todos os Direitos Reservados</span>
+                <span>Desenvolvido por <a href="">Mythical</a></span>
             </div>
         </section>
     </footer>
