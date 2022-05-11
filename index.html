@@ -20,6 +20,13 @@
 </head>
 
 <body id="body">
+    <div id="pageLoader" class="flex">
+        <div class="loader">
+            <div class="inner one"></div>
+            <div class="inner two"></div>
+            <div class="inner three"></div>
+        </div>
+    </div>
     <header id="headerNav" class="flex">
         <nav>
             <a href="index.html" id="logo"><img src="imgs/LogoNETFSA.svg" alt="NetFSA Logo"></a>
@@ -29,10 +36,12 @@
                 <li><a href="#offers" class="navCorrection navScrollFix">planos</a></li>
                 <li id="servicesMenu" class="navCorrection navScrollFix"><a>serviços</a>
                     <ul id="dropDowServices">
-                        <li><a href="https://netfsa.com.br/central_assinante_web">2 via do boleto</a></li>
+                        <li><a href="https://netfsa.com.br/central_assinante_web">2º via do boleto</a></li>
                         <li><a href="https://www.netfsa.com.br/contrato_netfsa.pdf">contrato</a></li>
                         <li><a href="http://ixcsoft.speedtestcustom.com/">speedtest</a></li>
                         <li><a href="https://www.netfsa.com.br/viabilidade-tecnica.php">viabilidade</a></li>
+                        <li><a href="https://play.google.com/store/apps/details?id=br.com.netfsa&hl=pt">App NetFSA</a>
+                        </li>
                     </ul>
                 </li>
                 <li><a href="#contacts" class="navCorrection navScrollFix">contato</a></li>
@@ -54,8 +63,8 @@
                     </button>
                 </div>
             </div>
-            <div id="carrousel02" class="flex carrouselBackground"></div>
-            <div id="carrousel03" class="flex carrouselBackground"><a
+            <div id="carrousel02" class="slideShowFix carrouselBackground"></div>
+            <div id="carrousel03" class="slideShowFix carrouselBackground"><a
                     href="https://play.google.com/store/apps/details?id=br.com.netfsa&hl=pt" target="_blank"></a></div>
         </section>
         <section id="dealsFrame">
@@ -63,7 +72,7 @@
             <div id="cardsDealContainer" class="flex">
                 <div class="cardDealOffer flex">
                     <div class="titleOfferContainer flex">
-                        <span class="dealTitleOffer">35 megas <br>fibra optica</span>
+                        <span class="dealTitleOffer">35 megas <br>fibra óptica</span>
                         <img src="imgs/MoreOffers_Arrow.svg" alt="">
                     </div>
                     <div class="dealsFeaturesIconsBox flex">
@@ -79,12 +88,14 @@
                     <div class="dealPriceContract flex">
                         <span>por apenas</span>
                         <span class="dealPriceExta">R$ 49,90</span>
-                        <a class="dealButton" href="" target="_blank">Contratar</a>
+                        <a class="dealButton"
+                            href="https://api.whatsapp.com/send?phone=557530222334&text=Olá! Gostaria de contratar um produto com vocês, como podemos prosseguir?"
+                            target="_blank">Contratar</a>
                     </div>
                 </div>
                 <div class="cardDealOffer flex">
                     <div class="titleOfferContainer flex">
-                        <span class="dealTitleOffer">35 megas <br>fibra optica</span>
+                        <span class="dealTitleOffer">50 megas <br>fibra óptica</span>
                         <img src="imgs/MoreOffers_Arrow.svg" alt="">
                     </div>
                     <div class="dealsFeaturesIconsBox flex">
@@ -94,23 +105,23 @@
                         <img src="imgs/OfferCardIcon_HDVideo.svg" alt="">
                         <img src="imgs/MoreOffers_Wifi.svg" alt="">
                         <span class="dealPlusSign">+</span>
-                        <!-- https://api.whatsapp.com/send?phone=557530222334&text= -->
+                        <!-- https://api.whatsapp.com/send?phone=557530222334&text=Olá! Gostaria de contratar um produto com vocês, como podemos prosseguir?  -->
                         <img src="imgs/MoreOffers_Tv.svg" alt="">
                         <span>Gratis</span>
                     </div>
                     <div class="dealPriceContract flex">
                         <span>por apenas</span>
-                        <span class="dealPriceExta">R$ 49,90</span>
+                        <span class="dealPriceExta">R$ 59,90</span>
 
                         <a class="dealButton"
-                            href="https://api.whatsapp.com/send?phone=557530222334&text=Opa quero compra essa paraa ae"
+                            href="https://api.whatsapp.com/send?phone=557530222334&text=Olá! Gostaria de contratar um produto com vocês, como podemos prosseguir?"
                             target="_blank">Contratar</a>
 
                     </div>
                 </div>
                 <div class="cardDealOffer flex">
                     <div class="titleOfferContainer flex">
-                        <span class="dealTitleOffer">35 megas <br>fibra optica</span>
+                        <span class="dealTitleOffer">100 megas <br>fibra óptica</span>
                         <img src="imgs/MoreOffers_Arrow.svg" alt="">
                     </div>
                     <div class="dealsFeaturesIconsBox flex">
@@ -125,13 +136,15 @@
                     </div>
                     <div class="dealPriceContract flex">
                         <span>por apenas</span>
-                        <span class="dealPriceExta">R$ 49,90</span>
-                        <a class="dealButton" href="" target="_blank">Contratar</a>
+                        <span class="dealPriceExta">R$ 74,90</span>
+                        <a class="dealButton"
+                            href="https://api.whatsapp.com/send?phone=557530222334&text=Olá! Gostaria de contratar um produto com vocês, como podemos prosseguir?"
+                            target="_blank">Contratar</a>
                     </div>
                 </div>
                 <div class="cardDealOffer flex">
                     <div class="titleOfferContainer flex">
-                        <span class="dealTitleOffer">35 megas <br>fibra optica</span>
+                        <span class="dealTitleOffer">200 megas <br>fibra óptica</span>
                         <img src="imgs/MoreOffers_Arrow.svg" alt="">
                     </div>
                     <div class="dealsFeaturesIconsBox flex">
@@ -146,13 +159,15 @@
                     </div>
                     <div class="dealPriceContract flex">
                         <span>por apenas</span>
-                        <span class="dealPriceExta">R$ 49,90</span>
-                        <a class="dealButton" href="" target="_blank">Contratar</a>
+                        <span class="dealPriceExta">R$ 84,90</span>
+                        <a class="dealButton"
+                            href="https://api.whatsapp.com/send?phone=557530222334&text=Olá! Gostaria de contratar um produto com vocês, como podemos prosseguir?"
+                            target="_blank">Contratar</a>
                     </div>
                 </div>
                 <div class="cardDealOffer flex">
                     <div class="titleOfferContainer flex">
-                        <span class="dealTitleOffer">35 megas <br>fibra optica</span>
+                        <span class="dealTitleOffer">300 megas <br>fibra óptica</span>
                         <img src="imgs/MoreOffers_Arrow.svg" alt="">
                     </div>
                     <div class="dealsFeaturesIconsBox flex">
@@ -167,29 +182,10 @@
                     </div>
                     <div class="dealPriceContract flex">
                         <span>por apenas</span>
-                        <span class="dealPriceExta">R$ 49,90</span>
-                        <a class="dealButton" href="" target="_blank">Contratar</a>
-                    </div>
-                </div>
-                <div class="cardDealOffer flex cardDealBBorder">
-                    <div class="titleOfferContainer flex">
-                        <span class="dealTitleOffer">35 megas <br>fibra optica</span>
-                        <img src="imgs/MoreOffers_Arrow.svg" alt="">
-                    </div>
-                    <div class="dealsFeaturesIconsBox flex">
-                        <img src="imgs/OfferCardIcon_SmartPhone.svg" alt="">
-                        <img src="imgs/OfferCardIcon_Computer.svg" alt="">
-                        <img src="imgs/OfferCardIcon_GameConsole.svg" alt="">
-                        <img src="imgs/OfferCardIcon_HDVideo.svg" alt="">
-                        <img src="imgs/MoreOffers_Wifi.svg" alt="">
-                        <span class="dealPlusSign">+</span>
-                        <img src="imgs/MoreOffers_Tv.svg" alt="">
-                        <span>Gratis</span>
-                    </div>
-                    <div class="dealPriceContract flex">
-                        <span>por apenas</span>
-                        <span class="dealPriceExta">R$ 49,90</span>
-                        <a class="dealButton" href="" target="_blank">Contratar</a>
+                        <span class="dealPriceExta">R$ 99,90</span>
+                        <a class="dealButton"
+                            href="https://api.whatsapp.com/send?phone=557530222334&text=Olá! Gostaria de contratar um produto com vocês, como podemos prosseguir?"
+                            target="_blank">Contratar</a>
                     </div>
                 </div>
             </div>
@@ -197,48 +193,78 @@
         <div id="mainGradient" class="mainGradient flex">
             <section id="offers" class="flex">
                 <div id="separatorStart" class="flex">
-                    <p>internet 100% fibra optica</p>
+                    <p>internet 100% fibra óptica</p>
                     <span class="flexLineBreaker"></span>
                     <p>planos de acordo com a sua necessidade</p>
                 </div>
                 <div class="extraGradient flex">
                     <div class="offersContainerResizer flex">
                         <div id="offersCards" class="flex">
-                            <div id="offerCard01" class="offerCard">
-                                <h2>50 megas <span class="spanBlock">fibra optica</span></h2>
+                            <div id="offerCard01" class="offerCard flex">
+                                <h2>50 megas <span class="spanBlock">fibra óptica</span></h2>
                                 <div class="imgDevicesAndUses">
                                     <img src="imgs/OfferCardIcon_SmartPhone.svg" alt="">
                                     <img src="imgs/OfferCardIcon_Computer.svg" alt="">
                                     <img src="imgs/OfferCardIcon_GameConsole.svg" alt="">
                                     <img src="imgs/OfferCardIcon_HDVideo.svg" alt="">
+                                    <div class="flexLineBreaker"></div>
+                                    <div class="offerPlusSubCard flex">
+                                        <span class="dealPlusSign">+</span>
+                                        <img src="imgs/MoreOffers_Tv.svg" alt="">
+                                        <span class="gratisExtra">grátis</span>
+                                    </div>
                                 </div>
-                                <p>alta velocidade <span class="spanBlock">50% upload</span></p>
-                                <p class="smallFontCard">por apenas <span class="priceCard">R$ 79,90</span></p>
-                                <a class="buttonOfferCard" href="" target="_blank">contratar</a>
+                                <p class="offerTextDesc">alta velocidade <br>100% download<br>100% upload</p>
+                                <div class="flexLineBreaker"></div>
+                                <p class="smallFontCard">por apenas <span class="priceCard">R$ 59,90</span></p>
+                                <div class="flexLineBreaker"></div>
+                                <a class="buttonOfferCard"
+                                    href="https://api.whatsapp.com/send?phone=557530222334&text=Olá! Gostaria de contratar um produto com vocês, como podemos prosseguir?"
+                                    target="_blank">contratar</a>
                             </div>
-                            <div id="offerCard02" class="offerCard">
-                                <h2>200 megas <span class="spanBlock">fibra optica</span></h2>
+                            <div id="offerCard02" class="offerCard flex">
+                                <h2>100 megas <span class="spanBlock">fibra óptica</span></h2>
                                 <div class="imgDevicesAndUses">
                                     <img src="imgs/OfferCardIcon_SmartPhone.svg" alt="">
                                     <img src="imgs/OfferCardIcon_Computer.svg" alt="">
                                     <img src="imgs/OfferCardIcon_GameConsole.svg" alt="">
                                     <img src="imgs/OfferCardIcon_HDVideo.svg" alt="">
+                                    <div class="flexLineBreaker"></div>
+                                    <div class="offerPlusSubCard flex">
+                                        <span class="dealPlusSign">+</span>
+                                        <img src="imgs/MoreOffers_Tv.svg" alt="">
+                                        <span class="gratisExtra">grátis</span>
+                                    </div>
                                 </div>
-                                <p>alta velocidade <span class="spanBlock">50% upload</span></p>
+                                <p class="offerTextDesc">alta velocidade <br>100% download<br>100% upload</p>
+                                <div class="flexLineBreaker"></div>
+                                <p class="smallFontCard">por apenas <span class="priceCard">R$ 74,90</span></p>
+                                <div class="flexLineBreaker"></div>
+                                <a class="buttonOfferCard"
+                                    href="https://api.whatsapp.com/send?phone=557530222334&text=Olá! Gostaria de contratar um produto com vocês, como podemos prosseguir?"
+                                    target="_blank">contratar</a>
+                            </div>
+                            <div id="offerCard03" class="offerCard flex">
+                                <h2>300 megas <span class="spanBlock">fibra óptica</span></h2>
+                                <div class="imgDevicesAndUses">
+                                    <img src="imgs/OfferCardIcon_SmartPhone.svg" alt="">
+                                    <img src="imgs/OfferCardIcon_Computer.svg" alt="">
+                                    <img src="imgs/OfferCardIcon_GameConsole.svg" alt="">
+                                    <img src="imgs/OfferCardIcon_HDVideo.svg" alt="">
+                                    <div class="flexLineBreaker"></div>
+                                    <div class="offerPlusSubCard flex">
+                                        <span class="dealPlusSign">+</span>
+                                        <img src="imgs/MoreOffers_Tv.svg" alt="">
+                                        <span class="gratisExtra">grátis</span>
+                                    </div>
+                                </div>
+                                <p class="offerTextDesc">alta velocidade <br>100% download<br>100% upload</p>
+                                <div class="flexLineBreaker"></div>
                                 <p class="smallFontCard">por apenas <span class="priceCard">R$ 99,90</span></p>
-                                <a class="buttonOfferCard" href="" target="_blank">contratar</a>
-                            </div>
-                            <div id="offerCard03" class="offerCard">
-                                <h2>50 megas <span class="spanBlock">fibra optica</span></h2>
-                                <div class="imgDevicesAndUses">
-                                    <img src="imgs/OfferCardIcon_SmartPhone.svg" alt="">
-                                    <img src="imgs/OfferCardIcon_Computer.svg" alt="">
-                                    <img src="imgs/OfferCardIcon_GameConsole.svg" alt="">
-                                    <img src="imgs/OfferCardIcon_HDVideo.svg" alt="">
-                                </div>
-                                <p>alta velocidade <span class="spanBlock">50% upload</span></p>
-                                <p class="smallFontCard">por apenas <span class="priceCard">R$ 79,90</span></p>
-                                <a class="buttonOfferCard" href="" target="_blank">contratar</a>
+                                <div class="flexLineBreaker"></div>
+                                <a class="buttonOfferCard"
+                                    href="https://api.whatsapp.com/send?phone=557530222334&text=Olá! Gostaria de contratar um produto com vocês, como podemos prosseguir?"
+                                    target="_blank">contratar</a>
                             </div>
                         </div>
                         <div class="flexLineBreaker"></div>
@@ -251,7 +277,7 @@
                                     <span class="spanBlock">atendimento 24 h</span>
                                 </div>
                                 <img class="advantageArrow" src="imgs/Advantages_Arrow.svg" alt="">
-                                <p>garantimos um atendimento rapido, pratico, sem burocracia e com total respeito aos
+                                <p>garantimos um atendimento rápido, prático, sem burocracia e com total respeito aos
                                     nossos clientes. Conte conosco para o melhor serviço de internet.</p>
                             </div>
                             <div class="flexLineBreaker"></div>
@@ -286,7 +312,7 @@
                     <div id="finalMessageCard">
                         <h2>nossos clientes <span class="spanBlock">nossa maior riqueza</span></h2>
                         <p>nosso objetivo é deixar o nosso cliente feliz e com total segurança do serviço contratado.
-                            garantimos total confiabilidade e a entrega dos nossos serviços.</p>
+                            Garantimos total confiabilidade e a entrega dos nossos serviços.</p>
                         <h3>você é a nossa riqueza</h3>
                     </div>
                 </section>
@@ -312,17 +338,17 @@
                     </g>
                 </svg>
                 <section id="faq" class="flex">
-                    <h2>duvidas frequentes</h2>
-                    <span>Respostas rapidas para facilitar seu dia a dia</span>
+                    <h2>dúvidas frequentes</h2>
+                    <span>Respostas rápidas para facilitar seu dia a dia</span>
                     <div id="faqCenterAndLeft" class="flex">
                         <div class="cardQuestionFaq">
                             <div class="questionFaq faqBoxEffect flex">
-                                <span>Como proceder em casos de problema com a conexão?</span><img class="arrowClick"
+                                <span>Como proceder em casos de problemas com a conexão?</span><img class="arrowClick"
                                     src="imgs/Faq_ArrowNotSelected.svg" alt="">
                             </div>
                             <div class="answerFaq faqBoxEffect">
-                                <p>Oferecemos Suporte Técnico Online gratuito, disponível todos os dias da semana das 8h
-                                    às 12h e das14h as 18h, sábados das 8h as 12h. no domingo um plantao das 8h as 11h.
+                                <p>Oferecemos Suporte Técnico Online 24 horas, disponível todos os dias da semana, até
+                                    no feriados. No domingo temos um plantão das 9h as 12h e 14:30h as 17:30h.
                                 </p>
                             </div>
                         </div>
@@ -332,8 +358,9 @@
                                     src="imgs/Faq_ArrowNotSelected.svg" alt="">
                             </div>
                             <div class="answerFaq faqBoxEffect">
-                                <p>Os pagamentos podem ser feitos através de boleto bancário e em breve cartão de
-                                    crédito.</p>
+                                <p>Os pagamentos podem ser feitos através de boleto bancário, cartão de crédito, pix,
+                                    presencial na nossa central, estão disponíveis pelo nosso site no central de
+                                    assinante ou no nosso aplicativo da Netfsa - Central de assinante.</p>
                             </div>
                         </div>
                         <div class="cardQuestionFaq">
@@ -355,7 +382,7 @@
                             </div>
                             <div class="answerFaq faqBoxEffect">
                                 <p>Para saber se o seu endereço possui cobertura do nosso provedor consulte a
-                                    viabilidade técnica.</p>
+                                    viabilidade técnica. Hoje só trabalhamos com internet 100% fibra óptica.</p>
                             </div>
                         </div>
                         <div class="cardQuestionFaq">
@@ -364,9 +391,9 @@
                                     class="arrowClick" src="imgs/Faq_ArrowNotSelected.svg" alt="">
                             </div>
                             <div class="answerFaq faqBoxEffect">
-                                <p>A 2ª via da fatura está disponível na Área do Cliente. Voce também pode solicitar por
-                                    e-mail, pelas redes sociais ou retira?-la na unidade da sua regia?o. Não esqueça de
-                                    manter seu cadastro sempre atualizado.</p>
+                                <p>A 2ª via da fatura está disponível na Central de Cliente. Você também pode solicitar
+                                    pelo WhatsApp ou retira-la na nossa loja. Não esqueça de manter seu cadastro sempre
+                                    atualizado.</p>
                             </div>
                         </div>
                     </div>
@@ -462,7 +489,7 @@
         <section id="finalFooter" class="flex">
             <div class="finalFooterContainer flex">
                 <span>© Copyright <strong>NetFSA.</strong> Todos os Direitos Reservados</span>
-                <span>Desenvolvido por <a href="">Mythical</a></span>
+                <span class="devSpan">Desenvolvido por <a href="">Mythical</a></span>
             </div>
         </section>
     </footer>

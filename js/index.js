@@ -7,18 +7,33 @@ function mapOverlayClear() {
 }
 
 function resizeSlideshow() {
+    document.getElementsByTagName("body")[0].style.left = 0;
     document.getElementById("welcome").style.maxHeight = document.body.clientWidth / 2.66666;
 }
 
 function setupFunctions() {
-    document.getElementById("welcome").style.maxHeight = document.body.clientWidth / 2.66666;
+
+
+    document.getElementById("carrousel02").classList.remove("slideShowFix");
+    document.getElementById("carrousel03").classList.remove("slideShowFix");
+
+    document.getElementById("carrousel02").classList.add("flex");
+    document.getElementById("carrousel03").classList.add("flex");
+
+    document.getElementById("carrousel01").classList.add("slideAnimation");
+    document.getElementById("carrousel02").classList.add("slideAnimation2");
+    document.getElementById("carrousel03").classList.add("slideAnimation3");
+
     var arrowClickElements = Array.from(document.getElementsByClassName("arrowClick"));
     arrowClickElements.forEach(showAnswerAddListener);
     var navFixElements = Array.from(document.getElementsByClassName("navScrollFix"));
     navFixElements.forEach(navFixAddListener);
     document.getElementById("moreOffers").addEventListener("click", showAllDeals);
     document.getElementById("closeDealsFrame").addEventListener("click", closeAllDeals);
-
+    document.getElementsByTagName("body")[0].style.overflowY = "scroll";
+    document.getElementById("welcome").style.maxHeight = document.body.clientWidth / 2.66666;
+    document.getElementById("pageLoader").classList.add("hideLoaderFX");
+    document.getElementById("pageLoader").classList.add("flex");
 }
 
 function showAllDeals(e) {
