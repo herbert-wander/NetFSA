@@ -12,6 +12,10 @@
     margin-bottom: 15px;
     
 }
+nav .arrowNav
+{
+    vertical-align: -2px;
+}
 #logo img
 {
     max-height: 70px;
@@ -63,7 +67,8 @@ nav ul li {
 
 #servicesMenu {
     position: relative;
-    display: block;
+    vertical-align: text-bottom;
+    /* display: block; */
 }
 
 #servicesMenu:hover {
@@ -84,6 +89,7 @@ nav ul li {
     margin-top: 0.3em;
     position: absolute;
     left: -25%;
+    top: 100%;
     visibility: hidden;
     transition: ease-out 100ms;
     border: 1px black solid;
@@ -135,22 +141,36 @@ nav ul li {
     font-size: 20px;
     font-weight: 900;
     text-transform: uppercase;
-    background-color: #FFE500;
+    background: linear-gradient(to bottom, #FFE500 0%, #FFE501 100%);
     cursor: pointer;
+    transition: 5s linear;
 }
 .defaultButton a{
-    color: #00176B;
+
     text-decoration: none;
 }
 .defaultButton a:visited{
     color: #00176B;
 }
 
+.defaultButton:hover
+{
+    color: #2246C8;
+    background: -webkit-linear-gradient(to bottom,  #FFE500 0%,#D9C40E 100%);
+    background: -o-linear-gradient(to bottom,  #FFE500 0%,#D9C40E 100%);
+    background: -ms-linear-gradient(to bottom,  #FFE500 0%,#D9C40E 100%);
+    background: linear-gradient(to bottom, #FFE500 0%, #D9C40E 100%);
+}
+.defaultButton:hover a
+{
+    color: #2246C8;
+}
 #presentationWelcome {
     padding-left: 2rem;
     flex: 1;
     font-size: 2.36em;
     font-weight: 700;
+    justify-content: flex-start;
     text-transform: uppercase;
     color: white;
 }
@@ -170,7 +190,7 @@ body
 #welcome
 {
     z-index: 2;
-    max-width: 100vw;
+    max-width: 100%;
     position: relative;
     height: 100%;
     justify-content: flex-start;
@@ -184,7 +204,7 @@ body
     max-width: 100vw;
     overflow: hidden;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     position: absolute;
     background-position: center;
 }
@@ -231,7 +251,7 @@ body
 
     border: 1px;
     border-radius: 20px;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     margin-top: 0.5rem;
     padding: 0.5rem;
     padding-left: 1.5rem;
@@ -264,6 +284,15 @@ body
 .closeDealSlideButtonFX
 {
     animation: closeDealSlideButton 1.5s ease 1 forwards;
+}
+
+.questionFX
+{
+    animation: question 1s ease 1 forwards;
+}
+.closeQuestionFX
+{
+    animation: closeQuestion 1s ease 1 forwards;
 }
 
 #separatorStart {
@@ -334,6 +363,10 @@ body
 .buttonOfferCard:hover {
     background: linear-gradient(to bottom, #82c4fa 0%, #033153 100%);
 }
+.dealButton:hover
+{
+    background: linear-gradient(to bottom, #82c4fa 0%, #033153 100%);
+}
 
 .offerCard {
     background: linear-gradient(to bottom, #0C5884 0%, #1F97DC 100%);
@@ -345,6 +378,9 @@ body
     padding: 1em;
     box-sizing: border-box;
     text-align: center;
+}
+.offerCard:hover {
+    border: 2px rgb(2, 0, 141) solid;
 }
 .offerCard h2 {
     font-size: 1.4em;
@@ -471,7 +507,7 @@ body
 #finalMessage {
     justify-content: space-around;
     width: 100%;
-    margin-top: 2rem;
+    margin-top: 7rem;
     margin-bottom: 3rem;
 }
 
@@ -511,8 +547,7 @@ body
 
 #finalMessage img {
 
-    width: 20rem;
-    height: 30rem;
+    max-height: 40vh;
 }
 
 .extraGradient {
@@ -715,12 +750,35 @@ body
     font-size: 1.25rem;
     font-weight: 500;
     padding-right: 2.5rem;
+    transition: all .5s ease-in-out;
     color: #6A6A6A;
 }
 .arrowClick
 {
+    /* 00b7ff */
+    font-size: 3.2rem;
+    color: #000;
+    cursor: pointer;
     margin-left: auto;
 }
+.questionArrowFX
+{
+    animation: questionArrow  0.3s linear 1 forwards;
+}
+.closeQuestionArrowFX
+{
+    animation: closeQuestionArrow  0.3s linear 1 forwards;
+}
+
+.answerFX
+{
+    animation: answer  0.3s linear 1 forwards;
+}
+.closeAnswerFX
+{
+    animation: closeAnswer  0.3s linear 1 forwards;
+}
+
 #hrSeparator
 {
     border: none;
@@ -746,8 +804,10 @@ body
     height: 50px;
     width: 50px;
     position: fixed;
-    top: 2vh;
-    left: 90vw;
+    top: 0;
+    right: 0;
+    margin-top: 1rem;
+    margin-right: 3rem;
     padding: 0.3rem;
     font-size: 2.5rem;
     background-color: #0C5884;
@@ -785,7 +845,7 @@ body
 }
 .dealsFeaturesIconsBox
 {
-    max-height: 56px;
+    
     align-items: center;
 }
 .dealsFeaturesIconsBox img,.dealsFeaturesIconsBox  span
@@ -859,7 +919,7 @@ body
   margin-top: 60px;
   width: 100%;
   height: 60px;
-  z-index: 5;
+  z-index: 1;
   position: relative;
 }
 
@@ -905,21 +965,21 @@ body
 }
 @keyframes dealSlideButton {
     0%{
-        left: -10vw;
+        transform: translateX(-100vw);
     }
     100%
     {
-        left: 90vw;
+        transform: translateX(100vw - 3rem);
     }
 }
 
 @keyframes closeDealSlideButton {
     0%{
-        left: 90vw;
+        transform: translateX(100vw - 3rem);
     }
     100%
     {
-        left: -10vw;
+        transform: translateX(-100vw);
     }
 }
 
@@ -999,6 +1059,59 @@ body
   100% {
       opacity: 0;
     visibility: hidden;
+  }
+}
+
+@keyframes questionArrow {
+  100% {
+    transform: rotate(180deg);
+    color: #00b7ff; 
+  }
+}
+@keyframes closeQuestionArrow {
+    0% {
+    transform: rotate(180deg);
+    color: #00b7ff;  
+  }
+  100% {
+    transform: rotate(0deg);
+    color: #000; 
+  }
+}
+
+@keyframes question {
+  100% {
+    color: #00659E; 
+  }
+}
+@keyframes closeQuestion {
+    0% {
+    color: #00659E;  
+  }
+  100% {
+    color: #000; 
+  }
+}
+
+@keyframes answer {
+  0% {
+    transform: scaleY(0);
+    max-height: 0;
+  }
+  100%{
+      
+      transform: scaleY(1); 
+      max-height: 500px;
+  }
+}
+@keyframes closeAnswer {
+    0% {
+    transform: scaleY(1);
+    max-height: 500px;
+  }
+  100% {
+    transform: scaleY(0);
+    max-height: 0; 
   }
 }
 
@@ -1219,4 +1332,188 @@ h4
   100% {
     transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
   }
+}
+body .disclaimer
+{
+    display: none;
+}
+#mobileMenu
+{
+    display: none;
+}
+#mobileMenuModal
+{
+    display: none;
+}
+.noneDisplay
+{
+    display: none;
+}
+.mobileSeparator
+{
+    border: none;
+    border-top: 2px dotted white;
+    width: 60%;
+}
+@media (max-width: 1092px) 
+{
+    nav .flex
+    {
+        display: none;
+    }
+    #buttonClientCentral
+    {
+        display: none;
+    }
+    #mobileMenuModal
+    {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        justify-content: center;
+        align-items: center;
+    }
+    #mobileMenuContainer
+    {
+        overflow-y: auto;
+        width: 95%;
+        background: linear-gradient(to bottom, #052A40 1%, #285874 50%, #44ADE9 100%);
+        height: 95%;
+        display: inline-flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.5rem;;
+        text-align: center;
+    }
+    #mobileMenuContainer span 
+    {
+        width: 100%;
+        max-width: 100%;
+        color: #fbff00;
+        flex: 1 0 100%;
+        text-transform: uppercase;
+        
+    }
+    #mobileMenuContainer a 
+    {
+        color: #fbff00;
+        text-decoration: none;
+    }
+    #mobileMenuContainer a:hover 
+    {
+        color: white;
+    }
+    #mobileMenu
+    {
+        display: flex;
+        cursor: pointer;
+        margin-right: 2rem;
+        font-size: 4rem;
+    }
+    #mobileMenu:hover
+    {
+        color: white;
+    }
+}
+@media (max-width: 1079px) 
+{
+    #offerCard02
+    {
+        margin-top:0;
+        margin-bottom: 0;
+    }
+    .offerCard
+    {
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    .rightPush
+    {
+        margin-left: 0;
+    }
+    .advantages p{
+        flex: auto; 
+    }
+}
+@media (max-width: 949px) 
+{
+    #finalMessageCard
+    {
+        margin-top: 2rem;
+    }
+}
+@media (max-width: 830px) 
+{
+    .dealsFeaturesIconsBox
+    {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+}
+@media (max-width: 720px) 
+{
+    #faq
+    {
+        width: 90%;
+    }
+    .finalFooterContainer
+    {
+        width: 95%;
+    }
+}
+@media (max-width: 620px) 
+{
+    #presentationWelcome
+    {
+        font-size: 1.8em;
+        box-sizing: border-box;
+    }
+    #buttonWelcomViabilidade
+    {
+        font-size: 0.9rem;
+    }
+    .pNoneWelcome
+    {
+        display: none;
+    }
+}
+@media (max-width: 600px) 
+{
+    .finalFooterContainer
+    {
+        justify-content: center;
+    }
+    .devSpan
+    {
+        margin-top: 1rem;
+    }
+    #finalFooter
+    {
+        background: linear-gradient(to bottom, #3fb9ff 35%, #9222dd 100%);
+    }
+}
+@media (max-width: 520px) 
+{
+    #offerCard02
+    {
+        margin-right:0;
+        margin-left: 0;
+    }
+    #faqCenterAndLeft
+    {
+        width: 100%;
+    }
+    #faq
+    {
+        width: 90%;
+    }
+    .dealsFeaturesIconsBox
+    {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
 }

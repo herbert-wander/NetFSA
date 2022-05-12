@@ -34,13 +34,17 @@
                 <li><a href="#body" class="navCorrection navScrollFix">inicio</a></li>
                 <li><a href="#ourAdvantages" class="navCorrection navScrollFix">empresa</a></li>
                 <li><a href="#offers" class="navCorrection navScrollFix">planos</a></li>
-                <li id="servicesMenu" class="navCorrection navScrollFix"><a>serviços</a>
+                <li id="servicesMenu" class="navCorrection navScrollFix flex"><a><span>serviços</span><i
+                            class='bx bxs-chevron-down arrowNav'></i></a>
                     <ul id="dropDowServices">
-                        <li><a href="https://netfsa.com.br/central_assinante_web">2º via do boleto</a></li>
+                        <li><a href="https://netfsa.com.br/central_assinante_web" target="_blank">2º via do boleto</a>
+                        </li>
                         <li><a href="https://www.netfsa.com.br/contrato_netfsa.pdf">contrato</a></li>
-                        <li><a href="http://ixcsoft.speedtestcustom.com/">speedtest</a></li>
-                        <li><a href="https://www.netfsa.com.br/viabilidade-tecnica.php">viabilidade</a></li>
-                        <li><a href="https://play.google.com/store/apps/details?id=br.com.netfsa&hl=pt">App NetFSA</a>
+                        <li><a href="https://ixcsoft.speedtestcustom.com/" target="_blank">speedtest</a></li>
+                        <li><a href="https://www.netfsa.com.br/viabilidade-tecnica.php" target="_blank">viabilidade</a>
+                        </li>
+                        <li><a href="https://play.google.com/store/apps/details?id=br.com.netfsa&hl=pt"
+                                target="_blank">App NetFSA</a>
                         </li>
                     </ul>
                 </li>
@@ -49,18 +53,47 @@
             <div id="buttonClientCentral" class="defaultButton flex">
                 <a href="https://netfsa.com.br/central_assinante_web" target="_blank">central do assinante</a>
             </div>
+            <div id="mobileMenu"><i class='bx bx-menu'></i></div>
         </nav>
+        <section id="mobileMenuModal">
+            <div id="mobileMenuContainer">
+                <span><a href="#body" class="navScrollFix mobileMenuClose">inicio</a></span>
+                <div class="mobileSeparator"></div>
+                <span><a href="#ourAdvantages" class="navScrollFix mobileMenuClose">empresa</a></span>
+                <div class="mobileSeparator"></div>
+                <span><a href="#offers" class="navScrollFix mobileMenuClose">planos</a></span>
+                <div class="mobileSeparator"></div>
+                <span><a href="https://netfsa.com.br/central_assinante_web" class="mobileMenuClose" target="_blank">2º
+                        via do
+                        boleto</a></span>
+                <div class="mobileSeparator"></div>
+                <span><a href="https://www.netfsa.com.br/contrato_netfsa.pdf"
+                        class="mobileMenuClose">contrato</a></span>
+                <div class="mobileSeparator"></div>
+                <span><a href="https://ixcsoft.speedtestcustom.com/" class="mobileMenuClose"
+                        target="_blank">speedtest</a></span>
+                <div class="mobileSeparator"></div>
+                <span><a href="https://www.netfsa.com.br/viabilidade-tecnica.php" class="mobileMenuClose"
+                        target="_blank">viabilidade</a></span>
+                <div class="mobileSeparator"></div>
+                <span><a href="https://play.google.com/store/apps/details?id=br.com.netfsa&hl=pt"
+                        class="mobileMenuClose" target="_blank">App NetFSA</a></span>
+                <div class="mobileSeparator"></div>
+                <span><a href="#contacts" class="navScrollFix mobileMenuClose">contato</a></span>
+            </div>
+        </section>
     </header>
     <main>
         <section id="welcome" class="flex">
             <div id="carrousel01" class="flex carrouselBackground">
-                <div id="presentationWelcome">
-                    <p>seja bem vindo a NETFSA <span>banda larga</span></p>
+                <div id="presentationWelcome" class="flex">
+                    <p class="pNoneWelcome">seja bem vindo a NETFSA <span>banda larga</span></p>
                     <p class="smallFont">internet rapida como você nunca viu</p>
-                    <button id="buttonWelcomViabilidade" class="defaultButton flex yellowButton"><a
+                    <div class="flexLineBreaker"></div>
+                    <div id="buttonWelcomViabilidade" class="defaultButton"><a
                             href="https://netfsa.com.br/viabilidade-tecnica.php">consultar
                             viabilidade</a>
-                    </button>
+                    </div>
                 </div>
             </div>
             <div id="carrousel02" class="slideShowFix carrouselBackground"></div>
@@ -268,7 +301,8 @@
                             </div>
                         </div>
                         <div class="flexLineBreaker"></div>
-                        <a id="moreOffers" class="defaultButton flex yellowButton">ver mais planos</a>
+                        <div id="moreOffers" class="defaultButton"><a>ver mais planos</a>
+                        </div>
                         <div class="flexLineBreaker"></div>
                         <div id="ourAdvantages" class="flex">
                             <div class="flex advantages">
@@ -309,7 +343,7 @@
                 </div>
                 <section id="finalMessage" class="flex">
                     <img src="imgs/ClientIsOurTreasure.svg" alt="">
-                    <div id="finalMessageCard">
+                    <div id="finalMessageCard" class="flex">
                         <h2>nossos clientes <span class="spanBlock">nossa maior riqueza</span></h2>
                         <p>nosso objetivo é deixar o nosso cliente feliz e com total segurança do serviço contratado.
                             Garantimos total confiabilidade e a entrega dos nossos serviços.</p>
@@ -317,7 +351,7 @@
                     </div>
                 </section>
                 <!-- stroke="#f00" stroke-width="3" -->
-                <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                <svg class="hero-waves" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"
                     viewBox="0 24 150 28 " preserveAspectRatio="none">
                     <defs>
                         <path id="wave-path"
@@ -343,8 +377,8 @@
                     <div id="faqCenterAndLeft" class="flex">
                         <div class="cardQuestionFaq">
                             <div class="questionFaq faqBoxEffect flex">
-                                <span>Como proceder em casos de problemas com a conexão?</span><img class="arrowClick"
-                                    src="imgs/Faq_ArrowNotSelected.svg" alt="">
+                                <span>Como proceder em casos de problemas com a conexão?</span><i
+                                    class='bx bxs-chevron-down arrowClick'></i>
                             </div>
                             <div class="answerFaq faqBoxEffect">
                                 <p>Oferecemos Suporte Técnico Online 24 horas, disponível todos os dias da semana, até
@@ -354,8 +388,8 @@
                         </div>
                         <div class="cardQuestionFaq">
                             <div class="questionFaq faqBoxEffect flex">
-                                <span>Quais as formas de pagamento de mensalidades?</span><img class="arrowClick"
-                                    src="imgs/Faq_ArrowNotSelected.svg" alt="">
+                                <span>Quais as formas de pagamento de mensalidades?</span><i
+                                    class='bx bxs-chevron-down arrowClick'></i>
                             </div>
                             <div class="answerFaq faqBoxEffect">
                                 <p>Os pagamentos podem ser feitos através de boleto bancário, cartão de crédito, pix,
@@ -365,8 +399,8 @@
                         </div>
                         <div class="cardQuestionFaq">
                             <div class="questionFaq faqBoxEffect flex">
-                                <span>O que posso fazer se minha internet não está funcionando?</span><img
-                                    class="arrowClick" src="imgs/Faq_ArrowNotSelected.svg" alt="">
+                                <span>O que posso fazer se minha internet não está funcionando?</span><i
+                                    class='bx bxs-chevron-down arrowClick'></i>
                             </div>
                             <div class="answerFaq faqBoxEffect">
                                 <p>Se ocorrer lentidão, ou alguma outra dificuldade relacionada à conexão, desligue o
@@ -377,8 +411,8 @@
                         </div>
                         <div class="cardQuestionFaq">
                             <div class="questionFaq faqBoxEffect flex">
-                                <span>Existe fibra óptica em todas as ruas?</span><img class="arrowClick"
-                                    src="imgs/Faq_ArrowNotSelected.svg" alt="">
+                                <span>Existe fibra óptica em todas as ruas?</span>
+                                <i class='bx bxs-chevron-down arrowClick'></i>
                             </div>
                             <div class="answerFaq faqBoxEffect">
                                 <p>Para saber se o seu endereço possui cobertura do nosso provedor consulte a
@@ -387,8 +421,8 @@
                         </div>
                         <div class="cardQuestionFaq">
                             <div class="questionFaq faqBoxEffect flex">
-                                <span>Não recebi a fatura desse mês, como faço para pagá-la?</span><img
-                                    class="arrowClick" src="imgs/Faq_ArrowNotSelected.svg" alt="">
+                                <span>Não recebi a fatura desse mês, como faço para pagá-la?</span><i
+                                    class='bx bxs-chevron-down arrowClick'></i>
                             </div>
                             <div class="answerFaq faqBoxEffect">
                                 <p>A 2ª via da fatura está disponível na Central de Cliente. Você também pode solicitar
@@ -471,7 +505,7 @@
                 <ul>
                     <li><i class="bx bx-chevron-right"></i><a href="https://netfsa.com.br/central_assinante_web">2ª via
                             de Boleto</a></li>
-                    <li><i class="bx bx-chevron-right"></i><a href="http://ixcsoft.speedtestcustom.com/">Speedtest</a>
+                    <li><i class="bx bx-chevron-right"></i><a href="https://ixcsoft.speedtestcustom.com/">Speedtest</a>
                     </li>
                     <li><i class="bx bx-chevron-right"></i><a
                             href="https://netfsa.com.br/viabilidade-tecnica.php">Consultar
