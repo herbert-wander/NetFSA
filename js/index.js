@@ -38,7 +38,9 @@ function setupFunctions() {
     document.getElementsByTagName("body")[0].style.overflowY = "scroll";
     document.getElementById("welcome").style.maxHeight = Math.floor(document.body.clientWidth / 2.66666);
     document.getElementById("pageLoader").classList.add("hideLoaderFX");
-    document.getElementById("pageLoader").classList.add("flex");
+    document.getElementById("pageLoader").onanimationend = () => {
+        document.getElementById("pageLoader").style.display = "none";
+    };
 }
 
 function showMobileMenu(e) {
@@ -47,7 +49,7 @@ function showMobileMenu(e) {
 }
 
 function closeMobileMenu(e) {
-    document.getElementsByTagName("body")[0].style.overflow = "scroll";
+    document.getElementsByTagName("body")[0].style.overflowY = "scroll";
     document.getElementById("mobileMenuModal").style.display = "none";
 }
 

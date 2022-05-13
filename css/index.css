@@ -133,6 +133,56 @@ nav ul li {
     filter: drop-shadow(0px 3px 4px #000000);
 }
 
+#float2via
+{
+    position: fixed;
+    z-index: 6;
+    left: 0;
+    bottom: 0;
+    transition: border 0.1s linear;
+    border: 0px dashed black;
+    margin-bottom: 0.2rem;
+    margin-left: 0.2rem;
+    font-size: 1rem;
+    border-radius: 40%;
+    text-align: center;
+    text-transform: uppercase;
+    background: #7db9e8; /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover,  #4aacf7 28%, #013a77 90%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover,  #4aacf7 28%,#013a77 90%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center,  #4aacf7 28%,#013a77 90%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7db9e8', endColorstr='#1e5799',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+#float2via i
+{
+    margin-top: 0.3rem;
+    font-size: 2.8rem;
+}
+#float2via a
+{
+    font-weight: 900;
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem;
+    padding-left: 0;
+    padding-right: 0;
+    color: #F2DE0B;
+    text-decoration: none;
+}
+#float2via a:visited
+{
+    color: #F2DE0B;
+}
+#float2via:hover
+{
+    transition: border 0.1s linear;
+    border: 2px dashed #00b7ff;
+}
+#float2via:hover a
+{
+    color: white;
+}
 .defaultButton {
     color: #00176B;
     text-align: center;
@@ -143,7 +193,6 @@ nav ul li {
     text-transform: uppercase;
     background: linear-gradient(to bottom, #FFE500 0%, #FFE501 100%);
     cursor: pointer;
-    transition: 5s linear;
 }
 .defaultButton a{
 
@@ -190,7 +239,8 @@ body
 #welcome
 {
     z-index: 2;
-    max-width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
     position: relative;
     height: 100%;
     justify-content: flex-start;
@@ -306,7 +356,6 @@ body
     background-color: #208DCE;
     text-align: center;
 }
-
 #offersCards {
     margin-top: 4em;
     text-transform: uppercase;
@@ -432,37 +481,45 @@ body
 }
 
 #ourAdvantages .advantages {
+    justify-content: space-around;
+}
+.advantages {
     max-width: 80%;
-
     border: 0.2em rgba(255, 255, 0, 1) solid;
     box-shadow: 0 0 15px rgba(255, 255, 0, 0.747);
     color: white;
-    justify-content: space-around;
-    font-size: 1.5em;
+    font-size: 2rem;
     padding: 2em;
     text-transform: initial;
     border-radius: 7em;
+    margin-right: 4rem;
 }
 
 .advantages span::first-letter {
     text-transform: uppercase;
 }
 
-.advantages img {
-    width: 130px;
-    height: 80px;
+.advantages div img {
+    max-width: 130px;
+    max-height: 80px;
 }
 
-#ourAdvantages .advantageArrow {
-    margin: 1em;
-    width: 30px;
+.advantages div img{
+    margin-right: 0.7rem;
+}
+
+.advantageArrow {
+    margin-left: 1.2rem;
+    margin-right: 1.2rem;
+    width: 20px;
 }
 
 .advantages div span {
     text-align: center;
     white-space: nowrap;
+    font-weight: 900;
     text-transform: uppercase;
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 .advantagesSeparator {
@@ -494,7 +551,8 @@ body
 }
 
 .rightPush {
-    margin-left: 10em;
+    margin-left: 22rem;
+    margin-right: 0;
 }
 
 .flex {
@@ -510,7 +568,14 @@ body
     margin-top: 7rem;
     margin-bottom: 3rem;
 }
-
+.rightPushSepa
+{
+    margin-left: 12rem;
+}
+.leftPushSepa
+{
+    margin-right: 12rem;
+}
 #finalMessageCard {
     text-align: center;
     color: white;
@@ -650,6 +715,11 @@ body
     position: relative;
     height: 25rem;
     width: 100%;
+}
+
+.mobileAdvantageFix
+{
+    margin-top: 0.4rem;
 }
 
 #contactLocation {
@@ -963,6 +1033,20 @@ body
         left: -100%;
     }
 }
+
+@keyframes floatAnimation {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(20px);
+    }
+    100%
+    {
+        transform: translateY(0px);
+    }
+}
+
 @keyframes dealSlideButton {
     0%{
         transform: translateX(-100vw);
@@ -1175,6 +1259,7 @@ footer
     width: 98%;
     align-items: flex-start;
     justify-content: space-around;
+    margin-bottom: 1.5rem;
     color: #0D0F0F;
 }
 #footer a
@@ -1290,6 +1375,19 @@ h4
   border-bottom: 3px solid #0404ff;
 }
 
+#offerCard02
+{
+    animation: floatAnimation 3.5s ease-in-out infinite;
+}
+
+#offerCard02:hover
+{
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused;
+}
+
 .inner.two {
   right: 0%;
   top: 0%;
@@ -1355,6 +1453,16 @@ body .disclaimer
     border-top: 2px dotted white;
     width: 60%;
 }
+.rightPush .advantageArrow
+{
+    transform: rotate(180deg);
+}
+@media (max-width: 1450px) 
+{
+    .rightPush {
+        margin-left: 12rem;
+    }
+}
 @media (max-width: 1092px) 
 {
     nav .flex
@@ -1419,7 +1527,7 @@ body .disclaimer
         color: white;
     }
 }
-@media (max-width: 1079px) 
+@media (max-width: 1080px) 
 {
     #offerCard02
     {
@@ -1435,9 +1543,20 @@ body .disclaimer
     {
         margin-left: 0;
     }
-    .advantages p{
-        flex: auto; 
+    .advantages
+    {
+        padding: 1.5rem;
+        font-size: 1.5rem;
+        margin-right: 0;
     }
+    .advantages p
+    {
+        flex: 1;
+    }
+    .advantages div span {
+        font-size: 1rem;
+    }
+
 }
 @media (max-width: 949px) 
 {
@@ -1453,6 +1572,23 @@ body .disclaimer
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
     }
+    #float2via a
+    {
+        width: 9vh;
+    }
+    .advantageArrow
+    {
+        max-width: 15px;
+    }
+    .mobileIconFix
+    {
+        flex: 1;
+        max-width: 25%;
+    }
+    .rightPush p
+    {
+        margin-left: 2rem;
+    }
 }
 @media (max-width: 720px) 
 {
@@ -1463,6 +1599,25 @@ body .disclaimer
     .finalFooterContainer
     {
         width: 95%;
+    }
+    #finalMessage img
+    {
+        max-height: 25vh;
+    }
+}
+@media (max-width: 680px) 
+{
+    .advantages .mobileIconFix img
+    {
+        max-height: 60px;
+    }
+    .advantageArrow
+    {
+        max-width: 15px;
+    }
+    #separatorStart
+    {
+        font-size: 1.5rem;
     }
 }
 @media (max-width: 620px) 
@@ -1495,6 +1650,31 @@ body .disclaimer
     {
         background: linear-gradient(to bottom, #3fb9ff 35%, #9222dd 100%);
     }
+    #float2via a {
+        width: 7vh;
+    }
+    #float2via a span
+    {
+        font-size: 1rem;
+    }
+    .mobileHideText
+    {
+        display: none;
+    }
+    .advantages
+    {
+        font-size: 1rem;
+        max-width: 95%;
+    }
+    .mobileIconFix img
+    {
+        max-height: 50px;
+    }
+    .advantages div span
+    {
+        font-size: 0.9rem;
+        font-weight: 900;
+    }
 }
 @media (max-width: 520px) 
 {
@@ -1515,5 +1695,59 @@ body .disclaimer
     {
         margin-top: 1rem;
         margin-bottom: 1rem;
+    }
+    #float2via a
+    {
+        padding-left: 0.2rem;
+        width: 5vh;
+    }
+    #float2via a span
+    {
+        display: none;
+    }
+    .advantages .mobileIconFix img
+    {
+        max-height: 45px;
+    }
+    .mobileIconFix .spanBlock span
+    {
+        display: block;
+    }
+    .footerCard
+    {
+        margin-bottom: 0.5rem;
+    }
+    #float2via
+    {
+        margin-bottom: 3.5rem;
+    }
+    .advantageArrow
+    {
+        max-width: 15px;
+        margin: 0.35rem;
+    }
+    #finalMessage img
+    {
+        max-height: 27vh;
+    }
+}
+@media (max-width: 360px) 
+{
+    .advantages 
+    {
+        font-size: 0.8rem;
+        max-width: 95%;
+    }
+    .advantages div span {
+        font-size: 0.7rem;
+        font-weight: 900;
+    }
+    #float2via
+    {
+        margin-bottom: 5.5rem;
+    }
+    #finalMessage img
+    {
+        max-height: 25vh;
     }
 }
