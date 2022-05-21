@@ -1248,6 +1248,19 @@ body
     transform: translate(85px, 0%);
   }
 }
+
+@keyframes aboutUsAppear {
+    0%{
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
 footer
 {
     width: 100%;
@@ -1398,6 +1411,12 @@ h4
 {
     animation: hideLoader 0.3s ease 1 forwards;
 }
+
+.aboutUsAppear
+{
+    animation: aboutUsAppear 0.5s ease-in 1 forwards;
+}
+
 .inner.three {
   right: 0%;
   bottom: 0%;
@@ -1457,10 +1476,69 @@ body .disclaimer
 {
     transform: rotate(180deg);
 }
+#aboutUs
+{
+    width: 100%;
+    margin-top: 5rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    font-size: 1.5rem;
+    padding: 2rem 0.5rem 15rem 0.5rem;
+    background-image: url(../imgs/AboutUs_Background.svg);
+}
+#aboutUs h3
+{
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 2.2rem;
+}
+#aboutUs h4
+{
+    color: #FFE501;
+    font-size: 1.6rem;
+    text-align: center;
+    text-transform: capitalize;
+}
+#aboutUs p
+{
+    text-align: center;
+}
+#aboutUs h3 span
+{
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #FFE501;
+}
+.aboutUsCardsContainer
+{
+    gap: 0.4rem;
+}
+.aboutUsCard
+{
+    border: 1px solid #B5B11E;
+    border-radius: 15px;
+    align-self: stretch;
+    opacity: 0;
+    width: 30%;
+    padding: 1rem;
+    background: rgba(45, 103, 137, 0.76);
+}
 @media (max-width: 1450px) 
 {
     .rightPush {
         margin-left: 12rem;
+    }
+}
+@media (max-width: 1220px) 
+{
+    nav ul li {
+    padding: 0 0.25em 0 0.25em;
+    }
+    #buttonClientCentral {
+        margin-left: 1.8em;
+        margin-right: 2em;
     }
 }
 @media (max-width: 1092px) 
@@ -1619,6 +1697,10 @@ body .disclaimer
     {
         font-size: 1.5rem;
     }
+    .aboutUsCard
+    {
+        width: 40%;
+    }
 }
 @media (max-width: 620px) 
 {
@@ -1729,6 +1811,10 @@ body .disclaimer
     #finalMessage img
     {
         max-height: 27vh;
+    }
+    .aboutUsCard
+    {
+        width: 90%;
     }
 }
 @media (max-width: 360px) 

@@ -1,6 +1,12 @@
 window.onload = setupFunctions;
 window.onresize = resizeSlideshow;
 
+let options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.3
+};
+
 function mapOverlayClear() {
     document.getElementById("overlayMap").style.pointerEvents = "none";
     document.getElementById("overlayMap").style.display = "none";
@@ -12,6 +18,8 @@ function resizeSlideshow() {
 
 function setupFunctions() {
 
+    let observer = new IntersectionObserver(aboutUsAnimation, options);
+    observer.observe(document.getElementById("aboutUs"));
 
     document.getElementById("carrousel02").classList.remove("slideShowFix");
     document.getElementById("carrousel03").classList.remove("slideShowFix");
@@ -126,8 +134,19 @@ function showAnswer(e) {
 }
 
 function navFixScroll(e) {
-    e.preventDefault();
-    var navHeight = window.getComputedStyle(document.getElementById("headerNav")).height.replace("px", "");
-    var scrollPos = document.getElementById(e.target.getAttribute("href").replace("#", "")).offsetTop - navHeight;
-    window.scroll(0, scrollPos);
+    if (e.target.getAttribute("href").includes("#")) {
+        e.preventDefault();
+        var navHeight = window.getComputedStyle(document.getElementById("headerNav")).height.replace("px", "");
+        var scrollPos = document.getElementById(e.target.getAttribute("href").replace("#", "")).offsetTop - navHeight;
+        window.scroll(0, scrollPos);
+    }
+}
+
+function aboutUsAnimation(entries, observer) {
+    if (entries[0].isIntersecting) {
+        var aboutUsCards = Array.from(document.getElementsByClassName("aboutUsCard"));
+        aboutUsCards.forEach(element => {
+            element.classList.add("aboutUsAppear");
+        });
+    }
 }
