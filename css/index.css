@@ -61,7 +61,7 @@ nav {
     color: whitesmoke;
 }
 nav ul li {
-    padding: 0 0.5em 0 0.5em;
+    padding: 0 1rem 0 1rem;
     display: inline-block;
 }
 
@@ -1484,30 +1484,34 @@ body .disclaimer
     background-size: cover;
     background-position: center;
     color: white;
-    font-size: 1.5rem;
-    padding: 2rem 0.5rem 15rem 0.5rem;
+    font-size: 2rem;
+    padding: 4.38rem 0.5rem 10.31rem 0.5rem;
     background-image: url(../imgs/AboutUs_Background.svg);
 }
 #aboutUs h3
 {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    text-align: center;
     text-transform: uppercase;
-    margin-bottom: 2.2rem;
+    margin-bottom: 5.6rem;
 }
 #aboutUs h4
 {
     color: #FFE501;
-    font-size: 1.6rem;
+    font-size: 2.38rem;
+    margin-bottom: 1.25rem;
     text-align: center;
     text-transform: capitalize;
 }
 #aboutUs p
 {
+    margin: 0;
+    padding: 0;
     text-align: center;
 }
 #aboutUs h3 span
 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 900;
     color: #FFE501;
 }
@@ -1522,7 +1526,7 @@ body .disclaimer
     align-self: stretch;
     opacity: 0;
     width: 30%;
-    padding: 1rem;
+    padding: 2.5rem 1.7rem 2.94rem 1.7rem;
     background: rgba(45, 103, 137, 0.76);
 }
 @media (max-width: 1450px) 
@@ -1531,10 +1535,10 @@ body .disclaimer
         margin-left: 12rem;
     }
 }
-@media (max-width: 1220px) 
+@media (max-width: 1280px) 
 {
     nav ul li {
-    padding: 0 0.25em 0 0.25em;
+    padding: 0 0.3rem 0 0.3rem;
     }
     #buttonClientCentral {
         margin-left: 1.8em;
@@ -1667,6 +1671,10 @@ body .disclaimer
     {
         margin-left: 2rem;
     }
+    .aboutUsCard
+    {
+        width: 40%;
+    }
 }
 @media (max-width: 720px) 
 {
@@ -1699,7 +1707,7 @@ body .disclaimer
     }
     .aboutUsCard
     {
-        width: 40%;
+        width: 95%;
     }
 }
 @media (max-width: 620px) 
@@ -1811,10 +1819,6 @@ body .disclaimer
     #finalMessage img
     {
         max-height: 27vh;
-    }
-    .aboutUsCard
-    {
-        width: 90%;
     }
 }
 @media (max-width: 360px) 
