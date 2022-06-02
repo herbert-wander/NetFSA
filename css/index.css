@@ -584,12 +584,27 @@ body
     text-align: center;
     color: white;
     padding: 2rem;
-    border: 0.2em rgba(255, 255, 0, 1) solid;
-    box-shadow: 0 0 15px rgba(255, 255, 0, 0.747);
+    border: 0 transparent solid;
+    /*border: 0.2em rgba(255, 255, 0, 1) solid;
+    box-shadow: 0 0 15px rgba(255, 255, 0, 0.747);*/
     border-radius: 0 15rem 15rem 15rem;
     font-size: 1.3rem;
+    background-color: #307298;
     font-weight: 800;
-    max-width: 30rem;
+    max-width: 30rem;  
+}
+
+#gradBorderFinalMessage
+{
+    background-color: #fbff00;
+    background: -moz-linear-gradient(to right, #FFE501 0%, #A7C1D0 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(to right, #FFE501 0%,#A7C1D0 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #FFE501 0%,#A7C1D0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFE501', endColorstr='#A7C1D0',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    border: 0 transparent solid;
+    border-radius: 0 15rem 15rem 15rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.747);
+    padding: 0.2rem;
     margin-right: 0.5rem;
     margin-left: 0.5rem;
 }
@@ -1192,13 +1207,13 @@ body
   100%{
       
       transform: scaleY(1); 
-      max-height: 1000px;
+      max-height: 5000px;
   }
 }
 @keyframes closeAnswer {
     0% {
     transform: scaleY(1);
-    max-height: 1000px;
+    max-height: 5000px;
   }
   100% {
     transform: scaleY(0);
@@ -1279,7 +1294,7 @@ footer
     width: 98%;
     align-items: flex-start;
     justify-content: space-around;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2.5rem;
     color: #0D0F0F;
 }
 #footer a
@@ -1683,7 +1698,7 @@ body .disclaimer
 }
 @media (max-width: 949px) 
 {
-    #finalMessageCard
+    #gradBorderFinalMessage
     {
         margin-top: 2rem;
     }
